@@ -1,0 +1,4770 @@
+{
+  "id": "ncert-x-quadratics",
+  "version": "2026-09-05.1",
+  "title": "Quadratic equations",
+  "grade": 10,
+  "reviewStatus": "Prototype: source checked and programmatically validated; independent teacher review pending",
+  "sources": [
+    {
+      "id": "chapter4",
+      "file": "class10math/jemh104.pdf",
+      "title": "NCERT Mathematics Class X, Chapter 4, Reprint 2026–27",
+      "sha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
+      "printedPages": [
+        38,
+        47
+      ],
+      "pdfPages": [
+        1,
+        10
+      ]
+    },
+    {
+      "id": "graphify",
+      "file": "quadratic-equations-graphify/curriculum-extraction.json",
+      "use": "Reviewed outline only; typed prerequisite relationships were simplified manually."
+    }
+  ],
+  "policy": {
+    "bands": [
+      "Foundational",
+      "Standard",
+      "Stretch"
+    ],
+    "sessionQuestions": 6,
+    "windowSize": 3,
+    "maxIntroChecks": 2,
+    "reviewDays": 3
+  },
+  "skills": [
+    {
+      "id": "signed",
+      "title": "Signs & squares",
+      "tagline": "Keep the sign with the number.",
+      "prerequisites": [],
+      "graphIds": [
+        "prereq_real_numbers"
+      ],
+      "foundation": true,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "supplementary-authored"
+      },
+      "lesson": {
+        "explanation": "A negative times a negative is positive. Squaring a negative number means multiplying that whole number by itself. Brackets matter.",
+        "example": "(-4)^2=16\\qquad -4^2=-16",
+        "steps": [
+          "In (−4)², both factors are −4, so the product is +16.",
+          "In −4², square 4 first, then apply the minus sign.",
+          "Keep the brackets when substituting a negative coefficient."
+        ]
+      }
+    },
+    {
+      "id": "coefficients",
+      "title": "Read the coefficients",
+      "tagline": "Find a, b and c, including their signs.",
+      "prerequisites": [
+        "signed"
+      ],
+      "graphIds": [
+        "skill_identify_coefficients",
+        "prereq_algebraic_expressions"
+      ],
+      "foundation": true,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "supplementary-authored"
+      },
+      "lesson": {
+        "explanation": "Put the equation in the order ax² + bx + c = 0. The numbers attached to x² and x are a and b. The constant is c.",
+        "example": "2x^2-5x+3=0\\quad\\Rightarrow\\quad a=2,\\ b=-5,\\ c=3",
+        "steps": [
+          "A missing x term has coefficient 0.",
+          "The coefficient of x² is 1 when no number is written.",
+          "The sign immediately before a term belongs to its coefficient."
+        ]
+      }
+    },
+    {
+      "id": "substitute",
+      "title": "Substitute a value",
+      "tagline": "Replace every x with the same number.",
+      "prerequisites": [
+        "signed"
+      ],
+      "graphIds": [
+        "prereq_substitution"
+      ],
+      "foundation": true,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "supplementary-authored"
+      },
+      "lesson": {
+        "explanation": "To test a value, replace every x with that value. Work out powers, then multiplication, then addition and subtraction.",
+        "example": "p(x)=2x^2-3x+1\\qquad p(1)=2-3+1=0",
+        "steps": [
+          "Put brackets around the value you substitute.",
+          "Calculate x² before multiplying it by its coefficient.",
+          "If the final value is zero, the number is a root of p(x) = 0."
+        ]
+      }
+    },
+    {
+      "id": "pairs",
+      "title": "Find the factor pair",
+      "tagline": "Two numbers, one sum, one product.",
+      "prerequisites": [
+        "signed"
+      ],
+      "graphIds": [
+        "prereq_factorisation",
+        "skill_split_middle"
+      ],
+      "foundation": true,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "supplementary-authored"
+      },
+      "lesson": {
+        "explanation": "To split the middle term of ax² + bx + c, find two numbers with sum b and product a × c. For a monic quadratic, a is 1.",
+        "example": "x^2-5x+6:\\quad (-2)+(-3)=-5,\\quad (-2)(-3)=6",
+        "steps": [
+          "List factor pairs of a × c.",
+          "Choose signs so the product is right.",
+          "Check the sum as well. Both conditions must work."
+        ]
+      }
+    },
+    {
+      "id": "zero",
+      "title": "The zero-product rule",
+      "tagline": "A zero product needs a zero factor.",
+      "prerequisites": [],
+      "graphIds": [
+        "prereq_zero_product"
+      ],
+      "foundation": true,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "supplementary-authored"
+      },
+      "lesson": {
+        "explanation": "If A × B = 0, at least one factor must be zero. Set each factor equal to zero separately. You do not need both factors to be zero at once.",
+        "example": "(x-2)(x-3)=0\\quad\\Rightarrow\\quad x-2=0\\ \\text{or}\\ x-3=0",
+        "steps": [
+          "A product can be zero because the first factor is zero.",
+          "It can also be zero because the second factor is zero.",
+          "This shortcut applies to a product equal to zero, not a sum or a nonzero product."
+        ]
+      }
+    },
+    {
+      "id": "linear",
+      "title": "Solve a linear factor",
+      "tagline": "Undo one operation at a time.",
+      "prerequisites": [],
+      "graphIds": [
+        "prereq_linear_equations",
+        "skill_solve_linear_factors"
+      ],
+      "foundation": true,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "supplementary-authored"
+      },
+      "lesson": {
+        "explanation": "Keep both sides equal. Add or subtract the same amount on each side, then divide by the coefficient of x.",
+        "example": "2x-3=0\\quad\\Rightarrow\\quad 2x=3\\quad\\Rightarrow\\quad x=\\frac{3}{2}",
+        "steps": [
+          "Add 3 to both sides.",
+          "Divide both sides by 2.",
+          "Check: 2 × (3/2) − 3 = 0."
+        ]
+      }
+    },
+    {
+      "id": "roots-arithmetic",
+      "title": "Square roots & fractions",
+      "tagline": "Keep the whole numerator over the denominator.",
+      "prerequisites": [
+        "signed"
+      ],
+      "graphIds": [
+        "prereq_real_numbers"
+      ],
+      "foundation": true,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "supplementary-authored"
+      },
+      "lesson": {
+        "explanation": "The square-root symbol means the non-negative square root. The ± sign gives two branches. Divide the whole numerator by the denominator.",
+        "example": "\\frac{4\\pm\\sqrt{16}}{2}=\\frac{4\\pm4}{2}\\quad\\Rightarrow\\quad 4\\ \\text{or}\\ 0",
+        "steps": [
+          "Find the square root first: √16 = 4.",
+          "Calculate the plus and minus branches separately.",
+          "When a root is not an integer, keep it exact as a surd, or use the stated decimal accuracy."
+        ]
+      }
+    },
+    {
+      "id": "recognise",
+      "title": "Spot a quadratic",
+      "tagline": "Bring the equation into focus.",
+      "prerequisites": [
+        "coefficients"
+      ],
+      "graphIds": [
+        "module_identify_standard_form",
+        "skill_simplify"
+      ],
+      "foundation": false,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "source-aligned-authored"
+      },
+      "lesson": {
+        "explanation": "A quadratic equation has highest power 2 after you expand, collect terms and move everything to one side. Its standard form is ax² + bx + c = 0, with a ≠ 0.",
+        "example": "x(x+1)+8=(x+2)(x-2)\\quad\\Rightarrow\\quad x+12=0",
+        "steps": [
+          "Expand both sides: x² + x + 8 = x² − 4.",
+          "Subtract x² from both sides. The square terms cancel.",
+          "The remaining equation is linear. Seeing x² at the start is not enough."
+        ]
+      }
+    },
+    {
+      "id": "verify",
+      "title": "Meet the roots",
+      "tagline": "Find the values that make it true.",
+      "prerequisites": [
+        "substitute"
+      ],
+      "graphIds": [
+        "module_roots_and_zeroes",
+        "skill_verify_roots"
+      ],
+      "foundation": false,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "source-aligned-authored"
+      },
+      "lesson": {
+        "explanation": "A root is a value of x that makes the equation true. For standard form, substitute the value and check whether the left side equals zero.",
+        "example": "2x^2-3x+1=0\\qquad x=1:\\quad 2(1)^2-3(1)+1=0",
+        "steps": [
+          "Replace every x with 1.",
+          "The left side is 2 − 3 + 1 = 0, so 1 is a root.",
+          "A quadratic has at most two distinct real roots. A repeated root has just one distinct value."
+        ]
+      }
+    },
+    {
+      "id": "factor",
+      "title": "Factor it out",
+      "tagline": "Turn one quadratic into two smaller equations.",
+      "prerequisites": [
+        "pairs",
+        "zero",
+        "linear"
+      ],
+      "graphIds": [
+        "module_factorisation_method",
+        "skill_split_middle",
+        "skill_solve_linear_factors"
+      ],
+      "foundation": false,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "source-aligned-authored"
+      },
+      "lesson": {
+        "explanation": "Rewrite the quadratic as a product of two linear factors. Then use the zero-product rule to solve each factor separately.",
+        "example": "2x^2-5x+3=(2x-3)(x-1)",
+        "steps": [
+          "Find numbers with product 2 × 3 = 6 and sum −5: −2 and −3.",
+          "Split and group: 2x² − 2x − 3x + 3 = 2x(x − 1) − 3(x − 1).",
+          "Factor: (2x − 3)(x − 1) = 0. Set each factor to zero: x = 3/2 or x = 1."
+        ]
+      }
+    },
+    {
+      "id": "formula",
+      "title": "Use the formula",
+      "tagline": "A method even when factors are hard to spot.",
+      "prerequisites": [
+        "coefficients",
+        "roots-arithmetic"
+      ],
+      "graphIds": [
+        "module_quadratic_formula",
+        "skill_apply_formula"
+      ],
+      "foundation": false,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "source-aligned-authored"
+      },
+      "lesson": {
+        "explanation": "Identify a, b and c, keeping their signs. Compute D = b² − 4ac. If D is non-negative, the quadratic formula gives the real roots.",
+        "example": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+        "steps": [
+          "For x² − 4x + 2 = 0, a = 1, b = −4, c = 2.",
+          "D = (−4)² − 4 × 1 × 2 = 8.",
+          "x = (4 ± √8)/2 = 2 ± √2. The entire numerator is divided by 2a."
+        ]
+      }
+    },
+    {
+      "id": "discriminant",
+      "title": "Read the discriminant",
+      "tagline": "Know the kind of roots before solving.",
+      "prerequisites": [
+        "coefficients",
+        "signed"
+      ],
+      "graphIds": [
+        "module_discriminant",
+        "skill_compute_discriminant"
+      ],
+      "foundation": false,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "source-aligned-authored"
+      },
+      "lesson": {
+        "explanation": "The discriminant is D = b² − 4ac. Its sign tells you how many distinct real roots the quadratic has.",
+        "example": "D>0:\\ 2\\text{ distinct}\\qquad D=0:\\ 1\\text{ repeated}\\qquad D<0:\\ 0\\text{ real}",
+        "steps": [
+          "Positive: two different real roots. They need not be integers.",
+          "Zero: two equal roots, or one distinct repeated value.",
+          "Negative: no real roots. This chapter works with real numbers."
+        ]
+      }
+    },
+    {
+      "id": "model",
+      "title": "Make it real",
+      "tagline": "Turn a situation into an equation.",
+      "prerequisites": [
+        "factor"
+      ],
+      "graphIds": [
+        "module_form_models",
+        "module_contextual_validation",
+        "module_integrated_applications",
+        "skill_choose_variable",
+        "skill_translate_constraints",
+        "skill_interpret_roots"
+      ],
+      "foundation": false,
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "source-aligned-authored"
+      },
+      "lesson": {
+        "explanation": "Define what x means. Translate the relationship into an equation, solve it, then check which roots make sense in the situation.",
+        "example": "\\text{width}=x,\\quad\\text{length}=2x+1,\\quad x(2x+1)=300",
+        "steps": [
+          "The equation is 2x² + x − 300 = 0.",
+          "Factor: (x − 12)(2x + 25) = 0, so x = 12 or −12.5.",
+          "A width cannot be negative. The width is 12 m and the length is 25 m."
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "signed-01",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-2)^2",
+      "type": "number",
+      "answer": 4,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-2) × (-2) = 4.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -2
+      }
+    },
+    {
+      "id": "signed-02",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-3)^2",
+      "type": "number",
+      "answer": 9,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-3) × (-3) = 9.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -3
+      }
+    },
+    {
+      "id": "signed-03",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-4)^2",
+      "type": "number",
+      "answer": 16,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-4) × (-4) = 16.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -4
+      }
+    },
+    {
+      "id": "signed-04",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-5)^2",
+      "type": "number",
+      "answer": 25,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-5) × (-5) = 25.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -5
+      }
+    },
+    {
+      "id": "signed-05",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-6)^2",
+      "type": "number",
+      "answer": 36,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-6) × (-6) = 36.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -6
+      }
+    },
+    {
+      "id": "signed-06",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-7)^2",
+      "type": "number",
+      "answer": 49,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-7) × (-7) = 49.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -7
+      }
+    },
+    {
+      "id": "signed-07",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-8)^2",
+      "type": "number",
+      "answer": 64,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-8) × (-8) = 64.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -8
+      }
+    },
+    {
+      "id": "signed-08",
+      "skill": "signed",
+      "band": 0,
+      "prompt": "Work out the square.",
+      "math": "(-9)^2",
+      "type": "number",
+      "answer": 81,
+      "hints": [
+        "Multiply the number by itself.",
+        "Two negative factors make a positive product."
+      ],
+      "explanation": "(-9) × (-9) = 81.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "square",
+        "n": -9
+      }
+    },
+    {
+      "id": "coefficients-01",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "x^2-3x+2=0",
+      "type": "choice",
+      "answer": "-3",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = -3.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 1,
+        "b": -3,
+        "c": 2
+      },
+      "choices": [
+        "1",
+        "2",
+        "-3",
+        "3",
+        "−1"
+      ]
+    },
+    {
+      "id": "coefficients-02",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "2x^2-5x+3=0",
+      "type": "choice",
+      "answer": "-5",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = -5.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 2,
+        "b": -5,
+        "c": 3
+      },
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "−1",
+        "-5"
+      ]
+    },
+    {
+      "id": "coefficients-03",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "3x^2+4x-2=0",
+      "type": "choice",
+      "answer": "4",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = 4.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 3,
+        "b": 4,
+        "c": -2
+      },
+      "choices": [
+        "3",
+        "4",
+        "-2",
+        "-4",
+        "−1"
+      ]
+    },
+    {
+      "id": "coefficients-04",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "x^2-9=0",
+      "type": "choice",
+      "answer": "0",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 1,
+        "b": 0,
+        "c": -9
+      },
+      "choices": [
+        "1",
+        "-9",
+        "0",
+        "−1"
+      ]
+    },
+    {
+      "id": "coefficients-05",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "4x^2-x=0",
+      "type": "choice",
+      "answer": "-1",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = -1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 4,
+        "b": -1,
+        "c": 0
+      },
+      "choices": [
+        "-1",
+        "4",
+        "0",
+        "1",
+        "−1"
+      ]
+    },
+    {
+      "id": "coefficients-06",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "2x^2+7x-4=0",
+      "type": "choice",
+      "answer": "7",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = 7.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 2,
+        "b": 7,
+        "c": -4
+      },
+      "choices": [
+        "2",
+        "-4",
+        "7",
+        "-7",
+        "−1"
+      ]
+    },
+    {
+      "id": "coefficients-07",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "5x^2-6x+1=0",
+      "type": "choice",
+      "answer": "-6",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = -6.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 5,
+        "b": -6,
+        "c": 1
+      },
+      "choices": [
+        "5",
+        "1",
+        "6",
+        "−1",
+        "-6"
+      ]
+    },
+    {
+      "id": "coefficients-08",
+      "skill": "coefficients",
+      "band": 0,
+      "prompt": "What is the coefficient b? ",
+      "math": "x^2+2x=0",
+      "type": "choice",
+      "answer": "2",
+      "hints": [
+        "Look for the term containing x, not x².",
+        "Include the sign before that term."
+      ],
+      "explanation": "The x coefficient is b = 2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "coefficient",
+        "a": 1,
+        "b": 2,
+        "c": 0
+      },
+      "choices": [
+        "1",
+        "2",
+        "0",
+        "-2",
+        "−1"
+      ]
+    },
+    {
+      "id": "substitute-01",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(2).",
+      "math": "p(x)=x^2-5x+6",
+      "type": "number",
+      "answer": 0,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(2) = 1 × (2)² + (-5) × (2) + (6) = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "x": 2
+      }
+    },
+    {
+      "id": "substitute-02",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(-1).",
+      "math": "p(x)=x^2+2x+1",
+      "type": "number",
+      "answer": 0,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(-1) = 1 × (-1)² + (2) × (-1) + (1) = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 1,
+        "b": 2,
+        "c": 1,
+        "x": -1
+      }
+    },
+    {
+      "id": "substitute-03",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(0).",
+      "math": "p(x)=2x^2-3x+1",
+      "type": "number",
+      "answer": 1,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(0) = 2 × (0)² + (-3) × (0) + (1) = 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 2,
+        "b": -3,
+        "c": 1,
+        "x": 0
+      }
+    },
+    {
+      "id": "substitute-04",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(5).",
+      "math": "p(x)=x^2-3x-10",
+      "type": "number",
+      "answer": 0,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(5) = 1 × (5)² + (-3) × (5) + (-10) = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 1,
+        "b": -3,
+        "c": -10,
+        "x": 5
+      }
+    },
+    {
+      "id": "substitute-05",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(-2).",
+      "math": "p(x)=2x^2+x-6",
+      "type": "number",
+      "answer": 0,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(-2) = 2 × (-2)² + (1) × (-2) + (-6) = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 2,
+        "b": 1,
+        "c": -6,
+        "x": -2
+      }
+    },
+    {
+      "id": "substitute-06",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(-3).",
+      "math": "p(x)=x^2-9",
+      "type": "number",
+      "answer": 0,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(-3) = 1 × (-3)² + (0) × (-3) + (-9) = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 1,
+        "b": 0,
+        "c": -9,
+        "x": -3
+      }
+    },
+    {
+      "id": "substitute-07",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(2).",
+      "math": "p(x)=x^2-4x+4",
+      "type": "number",
+      "answer": 0,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(2) = 1 × (2)² + (-4) × (2) + (4) = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 1,
+        "b": -4,
+        "c": 4,
+        "x": 2
+      }
+    },
+    {
+      "id": "substitute-08",
+      "skill": "substitute",
+      "band": 0,
+      "prompt": "Find p(2).",
+      "math": "p(x)=2x^2-5x+3",
+      "type": "number",
+      "answer": 1,
+      "hints": [
+        "Replace each x with the given number in brackets.",
+        "Square first, multiply next, then combine the terms."
+      ],
+      "explanation": "p(2) = 2 × (2)² + (-5) × (2) + (3) = 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "substitution",
+        "a": 2,
+        "b": -5,
+        "c": 3,
+        "x": 2
+      }
+    },
+    {
+      "id": "pairs-01",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=-5,\\qquad\text{product}=6",
+      "type": "roots",
+      "answer": [
+        -2,
+        -3
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "-2 + (-3) = -5, and (-2) × (-3) = 6.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": -5,
+        "product": 6
+      }
+    },
+    {
+      "id": "pairs-02",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=6,\\qquad\text{product}=8",
+      "type": "roots",
+      "answer": [
+        2,
+        4
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "2 + (4) = 6, and (2) × (4) = 8.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": 6,
+        "product": 8
+      }
+    },
+    {
+      "id": "pairs-03",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=5,\\qquad\text{product}=-6",
+      "type": "roots",
+      "answer": [
+        -1,
+        6
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "-1 + (6) = 5, and (-1) × (6) = -6.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": 5,
+        "product": -6
+      }
+    },
+    {
+      "id": "pairs-04",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=-7,\\qquad\text{product}=12",
+      "type": "roots",
+      "answer": [
+        -4,
+        -3
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "-4 + (-3) = -7, and (-4) × (-3) = 12.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": -7,
+        "product": 12
+      }
+    },
+    {
+      "id": "pairs-05",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=-2,\\qquad\text{product}=-15",
+      "type": "roots",
+      "answer": [
+        3,
+        -5
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "3 + (-5) = -2, and (3) × (-5) = -15.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": -2,
+        "product": -15
+      }
+    },
+    {
+      "id": "pairs-06",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=5,\\qquad\text{product}=-14",
+      "type": "roots",
+      "answer": [
+        -2,
+        7
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "-2 + (7) = 5, and (-2) × (7) = -14.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": 5,
+        "product": -14
+      }
+    },
+    {
+      "id": "pairs-07",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=-11,\\qquad\text{product}=30",
+      "type": "roots",
+      "answer": [
+        -5,
+        -6
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "-5 + (-6) = -11, and (-5) × (-6) = 30.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": -11,
+        "product": 30
+      }
+    },
+    {
+      "id": "pairs-08",
+      "skill": "pairs",
+      "band": 0,
+      "prompt": "Give the two numbers. Separate them with a comma.",
+      "math": "\text{sum}=-7,\\qquad\text{product}=-8",
+      "type": "roots",
+      "answer": [
+        1,
+        -8
+      ],
+      "hints": [
+        "List pairs that multiply to the product.",
+        "Now check which pair also has the right sum."
+      ],
+      "explanation": "1 + (-8) = -7, and (1) × (-8) = -8.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "pair",
+        "sum": -7,
+        "product": -8
+      }
+    },
+    {
+      "id": "zero-01",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x-2)(x-3)=0",
+      "type": "choice",
+      "answer": "x -2 = 0 or x -3 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x -2 = 0 OR x -3 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x -2 + x -3 = 0",
+        "x -2 = 0 or x -3 = 0",
+        "Both factors must be zero at the same time",
+        "Divide by x and remove one factor"
+      ]
+    },
+    {
+      "id": "zero-02",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x-1)(x-5)=0",
+      "type": "choice",
+      "answer": "x -1 = 0 or x -5 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x -1 = 0 OR x -5 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x -1 = 0 or x -5 = 0",
+        "x -1 + x -5 = 0",
+        "Both factors must be zero at the same time",
+        "Divide by x and remove one factor"
+      ]
+    },
+    {
+      "id": "zero-03",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x+2)(x-4)=0",
+      "type": "choice",
+      "answer": "x +2 = 0 or x -4 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x +2 = 0 OR x -4 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x +2 + x -4 = 0",
+        "Both factors must be zero at the same time",
+        "Divide by x and remove one factor",
+        "x +2 = 0 or x -4 = 0"
+      ]
+    },
+    {
+      "id": "zero-04",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x-3)(x+1)=0",
+      "type": "choice",
+      "answer": "x -3 = 0 or x +1 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x -3 = 0 OR x +1 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x -3 + x +1 = 0",
+        "Both factors must be zero at the same time",
+        "x -3 = 0 or x +1 = 0",
+        "Divide by x and remove one factor"
+      ]
+    },
+    {
+      "id": "zero-05",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x-6)(x-2)=0",
+      "type": "choice",
+      "answer": "x -6 = 0 or x -2 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x -6 = 0 OR x -2 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x -6 + x -2 = 0",
+        "x -6 = 0 or x -2 = 0",
+        "Both factors must be zero at the same time",
+        "Divide by x and remove one factor"
+      ]
+    },
+    {
+      "id": "zero-06",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x+3)(x+4)=0",
+      "type": "choice",
+      "answer": "x +3 = 0 or x +4 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x +3 = 0 OR x +4 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x +3 = 0 or x +4 = 0",
+        "x +3 + x +4 = 0",
+        "Both factors must be zero at the same time",
+        "Divide by x and remove one factor"
+      ]
+    },
+    {
+      "id": "zero-07",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x+0)(x-7)=0",
+      "type": "choice",
+      "answer": "x +0 = 0 or x -7 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x +0 = 0 OR x -7 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x +0 + x -7 = 0",
+        "Both factors must be zero at the same time",
+        "Divide by x and remove one factor",
+        "x +0 = 0 or x -7 = 0"
+      ]
+    },
+    {
+      "id": "zero-08",
+      "skill": "zero",
+      "band": 0,
+      "prompt": "Which next step uses the zero-product rule?",
+      "math": "(x-5)(x+6)=0",
+      "type": "choice",
+      "answer": "x -5 = 0 or x +6 = 0",
+      "hints": [
+        "A product of zero means at least one factor is zero.",
+        "Set each factor equal to zero separately."
+      ],
+      "explanation": "Solve x -5 = 0 OR x +6 = 0. Either factor can make the product zero.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "x -5 + x +6 = 0",
+        "Both factors must be zero at the same time",
+        "x -5 = 0 or x +6 = 0",
+        "Divide by x and remove one factor"
+      ]
+    },
+    {
+      "id": "linear-01",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "2x-3=0",
+      "type": "roots",
+      "answer": [
+        1.5
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "2x = 3, so x = 3/2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 2,
+        "b": -3
+      }
+    },
+    {
+      "id": "linear-02",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "1x-4=0",
+      "type": "roots",
+      "answer": [
+        4.0
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "1x = 4, so x = 4.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 1,
+        "b": -4
+      }
+    },
+    {
+      "id": "linear-03",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "3x+6=0",
+      "type": "roots",
+      "answer": [
+        -2.0
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "3x = -6, so x = -2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 3,
+        "b": 6
+      }
+    },
+    {
+      "id": "linear-04",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "4x-2=0",
+      "type": "roots",
+      "answer": [
+        0.5
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "4x = 2, so x = 1/2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 4,
+        "b": -2
+      }
+    },
+    {
+      "id": "linear-05",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "2x+5=0",
+      "type": "roots",
+      "answer": [
+        -2.5
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "2x = -5, so x = -5/2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 2,
+        "b": 5
+      }
+    },
+    {
+      "id": "linear-06",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "5x-10=0",
+      "type": "roots",
+      "answer": [
+        2.0
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "5x = 10, so x = 2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 5,
+        "b": -10
+      }
+    },
+    {
+      "id": "linear-07",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "3x-1=0",
+      "type": "roots",
+      "answer": [
+        0.3333333333333333
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "3x = 1, so x = 1/3.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 3,
+        "b": -1
+      }
+    },
+    {
+      "id": "linear-08",
+      "skill": "linear",
+      "band": 0,
+      "prompt": "Find x. You can enter a fraction.",
+      "math": "4x+3=0",
+      "type": "roots",
+      "answer": [
+        -0.75
+      ],
+      "hints": [
+        "Move the constant by doing the same operation on both sides.",
+        "Divide both sides by the coefficient of x."
+      ],
+      "explanation": "4x = -3, so x = -3/4.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "linear",
+        "a": 4,
+        "b": 3
+      }
+    },
+    {
+      "id": "roots-arithmetic-01",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{16}}{2}",
+      "type": "number",
+      "answer": 2.0,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√16 = 4; divide by 2 to get 2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 16,
+        "d": 2
+      }
+    },
+    {
+      "id": "roots-arithmetic-02",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{36}}{3}",
+      "type": "number",
+      "answer": 2.0,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√36 = 6; divide by 3 to get 2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 36,
+        "d": 3
+      }
+    },
+    {
+      "id": "roots-arithmetic-03",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{64}}{4}",
+      "type": "number",
+      "answer": 2.0,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√64 = 8; divide by 4 to get 2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 64,
+        "d": 4
+      }
+    },
+    {
+      "id": "roots-arithmetic-04",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{100}}{2}",
+      "type": "number",
+      "answer": 5.0,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√100 = 10; divide by 2 to get 5.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 100,
+        "d": 2
+      }
+    },
+    {
+      "id": "roots-arithmetic-05",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{81}}{3}",
+      "type": "number",
+      "answer": 3.0,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√81 = 9; divide by 3 to get 3.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 81,
+        "d": 3
+      }
+    },
+    {
+      "id": "roots-arithmetic-06",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{49}}{7}",
+      "type": "number",
+      "answer": 1.0,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√49 = 7; divide by 7 to get 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 49,
+        "d": 7
+      }
+    },
+    {
+      "id": "roots-arithmetic-07",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{144}}{4}",
+      "type": "number",
+      "answer": 3.0,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√144 = 12; divide by 4 to get 3.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 144,
+        "d": 4
+      }
+    },
+    {
+      "id": "roots-arithmetic-08",
+      "skill": "roots-arithmetic",
+      "band": 0,
+      "prompt": "Calculate the value. A fraction is fine.",
+      "math": "\frac{\\sqrt{25}}{2}",
+      "type": "number",
+      "answer": 2.5,
+      "hints": [
+        "Find the non-negative square root first.",
+        "Then divide by the denominator."
+      ],
+      "explanation": "√25 = 5; divide by 2 to get 5/2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "sqrtdivide",
+        "n": 25,
+        "d": 2
+      }
+    },
+    {
+      "id": "recognise-01",
+      "skill": "recognise",
+      "band": 0,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "x^2+3x+2=0",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "It is already in standard form, with a = 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "No, it is not quadratic",
+        "Yes, it is quadratic"
+      ]
+    },
+    {
+      "id": "recognise-02",
+      "skill": "recognise",
+      "band": 0,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "2x^2-7=0",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "The missing x term has b = 0; a = 2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-03",
+      "skill": "recognise",
+      "band": 0,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "3x+4=0",
+      "type": "choice",
+      "answer": "No, it is not quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "The highest power is 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-04",
+      "skill": "recognise",
+      "band": 0,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "7-x^2=0",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "Reorder it as −x² + 7 = 0; a = −1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-05",
+      "skill": "recognise",
+      "band": 0,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "x^3+x=0",
+      "type": "choice",
+      "answer": "No, it is not quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "Its highest power is 3.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-06",
+      "skill": "recognise",
+      "band": 1,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "(x+1)^2=2(x-3)",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "Expansion gives x² + 2x + 1 = 2x − 6, so x² + 7 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-07",
+      "skill": "recognise",
+      "band": 1,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "x^2+3x+1=(x-2)^2",
+      "type": "choice",
+      "answer": "No, it is not quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "Subtracting the right side gives 7x − 3 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-08",
+      "skill": "recognise",
+      "band": 1,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "x(x+2)=8",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "This becomes x² + 2x − 8 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-09",
+      "skill": "recognise",
+      "band": 1,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "(x-2)(x+1)=(x-1)(x+3)",
+      "type": "choice",
+      "answer": "No, it is not quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "The x² terms cancel; the equation becomes −3x + 1 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-10",
+      "skill": "recognise",
+      "band": 1,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "2x^2+1=x^2+5",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "Collecting terms gives x² − 4 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-11",
+      "skill": "recognise",
+      "band": 2,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "(x+2)^3=x^3-4",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "The x³ terms cancel, leaving 6x² + 12x + 12 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "No, it is not quadratic",
+        "Yes, it is quadratic"
+      ]
+    },
+    {
+      "id": "recognise-12",
+      "skill": "recognise",
+      "band": 2,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "x^3-4x^2-x+1=(x-2)^3",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "Subtracting the right side gives 2x² − 13x + 9 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "recognise-13",
+      "skill": "recognise",
+      "band": 2,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "(2x-1)(x-3)=(x+5)(x-1)",
+      "type": "choice",
+      "answer": "Yes, it is quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "After expansion and collection: x² − 11x + 8 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "No, it is not quadratic",
+        "Yes, it is quadratic"
+      ]
+    },
+    {
+      "id": "recognise-14",
+      "skill": "recognise",
+      "band": 2,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "x(x+1)+8=(x+2)(x-2)",
+      "type": "choice",
+      "answer": "No, it is not quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "The x² terms cancel, leaving x + 12 = 0.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "No, it is not quadratic",
+        "Yes, it is quadratic"
+      ]
+    },
+    {
+      "id": "recognise-15",
+      "skill": "recognise",
+      "band": 2,
+      "prompt": "Is this a quadratic equation after simplifying?",
+      "math": "(x+2)^3=2x(x^2-1)",
+      "type": "choice",
+      "answer": "No, it is not quadratic",
+      "hints": [
+        "Expand brackets on both sides.",
+        "Collect everything on one side. Does an x² term remain as the highest power?"
+      ],
+      "explanation": "After collecting terms, the x³ coefficient is −1; the equation is cubic.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 39,
+        "pdfPage": 2,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "Yes, it is quadratic",
+        "No, it is not quadratic"
+      ]
+    },
+    {
+      "id": "verify-01",
+      "skill": "verify",
+      "band": 0,
+      "prompt": "Is x = 2 a root of this equation?",
+      "math": "x^2-5x+6=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 1 × (2)² + (-5) × (2) + (6) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "x": 2
+      },
+      "choices": [
+        "Yes, the left side becomes 0",
+        "No, the left side is not 0"
+      ]
+    },
+    {
+      "id": "verify-02",
+      "skill": "verify",
+      "band": 0,
+      "prompt": "Is x = 1 a root of this equation?",
+      "math": "x^2-5x+6=0",
+      "type": "choice",
+      "answer": "No, the left side is not 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 1 × (1)² + (-5) × (1) + (6) = 2. This value is not a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "x": 1
+      },
+      "choices": [
+        "Yes, the left side becomes 0",
+        "No, the left side is not 0"
+      ]
+    },
+    {
+      "id": "verify-03",
+      "skill": "verify",
+      "band": 0,
+      "prompt": "Is x = 3 a root of this equation?",
+      "math": "x^2-9=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 1 × (3)² + (0) × (3) + (-9) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 1,
+        "b": 0,
+        "c": -9,
+        "x": 3
+      },
+      "choices": [
+        "Yes, the left side becomes 0",
+        "No, the left side is not 0"
+      ]
+    },
+    {
+      "id": "verify-04",
+      "skill": "verify",
+      "band": 0,
+      "prompt": "Is x = -4 a root of this equation?",
+      "math": "x^2+2x-8=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 1 × (-4)² + (2) × (-4) + (-8) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 1,
+        "b": 2,
+        "c": -8,
+        "x": -4
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "verify-05",
+      "skill": "verify",
+      "band": 0,
+      "prompt": "Is x = 2 a root of this equation?",
+      "math": "x^2-4x+4=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 1 × (2)² + (-4) × (2) + (4) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 1,
+        "b": -4,
+        "c": 4,
+        "x": 2
+      },
+      "choices": [
+        "Yes, the left side becomes 0",
+        "No, the left side is not 0"
+      ]
+    },
+    {
+      "id": "verify-06",
+      "skill": "verify",
+      "band": 1,
+      "prompt": "Is x = 1 a root of this equation?",
+      "math": "2x^2-3x+1=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 2 × (1)² + (-3) × (1) + (1) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 2,
+        "b": -3,
+        "c": 1,
+        "x": 1
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "verify-07",
+      "skill": "verify",
+      "band": 1,
+      "prompt": "Is x = 2 a root of this equation?",
+      "math": "2x^2+x-6=0",
+      "type": "choice",
+      "answer": "No, the left side is not 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 2 × (2)² + (1) × (2) + (-6) = 4. This value is not a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 2,
+        "b": 1,
+        "c": -6,
+        "x": 2
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "verify-08",
+      "skill": "verify",
+      "band": 1,
+      "prompt": "Is x = 3/2 a root of this equation?",
+      "math": "2x^2-5x+3=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 2 × (3/2)² + (-5) × (3/2) + (3) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 2,
+        "b": -5,
+        "c": 3,
+        "x": 1.5
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "verify-09",
+      "skill": "verify",
+      "band": 1,
+      "prompt": "Is x = -1 a root of this equation?",
+      "math": "3x^2-3x-6=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 3 × (-1)² + (-3) × (-1) + (-6) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 3,
+        "b": -3,
+        "c": -6,
+        "x": -1
+      },
+      "choices": [
+        "Yes, the left side becomes 0",
+        "No, the left side is not 0"
+      ]
+    },
+    {
+      "id": "verify-10",
+      "skill": "verify",
+      "band": 1,
+      "prompt": "Is x = -1 a root of this equation?",
+      "math": "2x^2-x-3=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 2 × (-1)² + (-1) × (-1) + (-3) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 2,
+        "b": -1,
+        "c": -3,
+        "x": -1
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "verify-11",
+      "skill": "verify",
+      "band": 2,
+      "prompt": "Is x = 1/2 a root of this equation?",
+      "math": "4x^2+4x-3=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 4 × (1/2)² + (4) × (1/2) + (-3) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 4,
+        "b": 4,
+        "c": -3,
+        "x": 0.5
+      },
+      "choices": [
+        "Yes, the left side becomes 0",
+        "No, the left side is not 0"
+      ]
+    },
+    {
+      "id": "verify-12",
+      "skill": "verify",
+      "band": 2,
+      "prompt": "Is x = 1/2 a root of this equation?",
+      "math": "4x^2-4x+1=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 4 × (1/2)² + (-4) × (1/2) + (1) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 4,
+        "b": -4,
+        "c": 1,
+        "x": 0.5
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "verify-13",
+      "skill": "verify",
+      "band": 2,
+      "prompt": "Is x = -1/2 a root of this equation?",
+      "math": "6x^2-x-2=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 6 × (-1/2)² + (-1) × (-1/2) + (-2) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 6,
+        "b": -1,
+        "c": -2,
+        "x": -0.5
+      },
+      "choices": [
+        "Yes, the left side becomes 0",
+        "No, the left side is not 0"
+      ]
+    },
+    {
+      "id": "verify-14",
+      "skill": "verify",
+      "band": 2,
+      "prompt": "Is x = 1/2 a root of this equation?",
+      "math": "8x^2+2x-3=0",
+      "type": "choice",
+      "answer": "Yes, the left side becomes 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 8 × (1/2)² + (2) × (1/2) + (-3) = 0. This value is a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 8,
+        "b": 2,
+        "c": -3,
+        "x": 0.5
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "verify-15",
+      "skill": "verify",
+      "band": 2,
+      "prompt": "Is x = 2 a root of this equation?",
+      "math": "3x^2-5x+2=0",
+      "type": "choice",
+      "answer": "No, the left side is not 0",
+      "hints": [
+        "Substitute the proposed value for every x.",
+        "Evaluate the whole left side, not just the x² term."
+      ],
+      "explanation": "The left side is 3 × (2)² + (-5) × (2) + (2) = 4. This value is not a root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "verify",
+        "a": 3,
+        "b": -5,
+        "c": 2,
+        "x": 2
+      },
+      "choices": [
+        "No, the left side is not 0",
+        "Yes, the left side becomes 0"
+      ]
+    },
+    {
+      "id": "factor-01",
+      "skill": "factor",
+      "band": 0,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "x^2-5x+6=0",
+      "type": "roots",
+      "answer": [
+        3.0,
+        2.0
+      ],
+      "hints": [
+        "Find two numbers with sum -5 and product 6.",
+        "The expression factors as (x − 3)(x − 2). Set each factor equal to zero."
+      ],
+      "explanation": "(x − 3)(x − 2) = 0. Set each factor equal to zero to get x = 3 or x = 2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": -5,
+        "c": 6
+      }
+    },
+    {
+      "id": "factor-02",
+      "skill": "factor",
+      "band": 0,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "x^2-3x-10=0",
+      "type": "roots",
+      "answer": [
+        5.0,
+        -2.0
+      ],
+      "hints": [
+        "Find two numbers with sum -3 and product -10.",
+        "The expression factors as (x − 5)(x + 2). Set each factor equal to zero."
+      ],
+      "explanation": "(x − 5)(x + 2) = 0. Set each factor equal to zero to get x = 5 or x = -2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": -3,
+        "c": -10
+      }
+    },
+    {
+      "id": "factor-03",
+      "skill": "factor",
+      "band": 0,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "x^2+x-6=0",
+      "type": "roots",
+      "answer": [
+        2.0,
+        -3.0
+      ],
+      "hints": [
+        "Find two numbers with sum 1 and product -6.",
+        "The expression factors as (x − 2)(x + 3). Set each factor equal to zero."
+      ],
+      "explanation": "(x − 2)(x + 3) = 0. Set each factor equal to zero to get x = 2 or x = -3. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": 1,
+        "c": -6
+      }
+    },
+    {
+      "id": "factor-04",
+      "skill": "factor",
+      "band": 0,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "x^2-7x+12=0",
+      "type": "roots",
+      "answer": [
+        4.0,
+        3.0
+      ],
+      "hints": [
+        "Find two numbers with sum -7 and product 12.",
+        "The expression factors as (x − 4)(x − 3). Set each factor equal to zero."
+      ],
+      "explanation": "(x − 4)(x − 3) = 0. Set each factor equal to zero to get x = 4 or x = 3. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": -7,
+        "c": 12
+      }
+    },
+    {
+      "id": "factor-05",
+      "skill": "factor",
+      "band": 0,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "x^2+5x+6=0",
+      "type": "roots",
+      "answer": [
+        -2.0,
+        -3.0
+      ],
+      "hints": [
+        "Find two numbers with sum 5 and product 6.",
+        "The expression factors as (x + 2)(x + 3). Set each factor equal to zero."
+      ],
+      "explanation": "(x + 2)(x + 3) = 0. Set each factor equal to zero to get x = -2 or x = -3. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": 5,
+        "c": 6
+      }
+    },
+    {
+      "id": "factor-06",
+      "skill": "factor",
+      "band": 0,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "x^2-16=0",
+      "type": "roots",
+      "answer": [
+        4.0,
+        -4.0
+      ],
+      "hints": [
+        "Find two numbers with sum 0 and product -16.",
+        "The expression factors as (x − 4)(x + 4). Set each factor equal to zero."
+      ],
+      "explanation": "(x − 4)(x + 4) = 0. Set each factor equal to zero to get x = 4 or x = -4. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": 0,
+        "c": -16
+      }
+    },
+    {
+      "id": "factor-07",
+      "skill": "factor",
+      "band": 1,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "2x^2+x-6=0",
+      "type": "roots",
+      "answer": [
+        1.5,
+        -2.0
+      ],
+      "hints": [
+        "Find two numbers with sum 1 and product -12.",
+        "The expression factors as (2x − 3)(x + 2). Set each factor equal to zero."
+      ],
+      "explanation": "(2x − 3)(x + 2) = 0. Set each factor equal to zero to get x = 3/2 or x = -2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 2,
+        "b": 1,
+        "c": -6
+      }
+    },
+    {
+      "id": "factor-08",
+      "skill": "factor",
+      "band": 1,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "2x^2-5x+3=0",
+      "type": "roots",
+      "answer": [
+        1.5,
+        1.0
+      ],
+      "hints": [
+        "Find two numbers with sum -5 and product 6.",
+        "The expression factors as (2x − 3)(x − 1). Set each factor equal to zero."
+      ],
+      "explanation": "(2x − 3)(x − 1) = 0. Set each factor equal to zero to get x = 3/2 or x = 1. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 2,
+        "b": -5,
+        "c": 3
+      }
+    },
+    {
+      "id": "factor-09",
+      "skill": "factor",
+      "band": 1,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "3x^2-7x+2=0",
+      "type": "roots",
+      "answer": [
+        2.0,
+        0.3333333333333333
+      ],
+      "hints": [
+        "Find two numbers with sum -7 and product 6.",
+        "The expression factors as (x − 2)(3x − 1). Set each factor equal to zero."
+      ],
+      "explanation": "(x − 2)(3x − 1) = 0. Set each factor equal to zero to get x = 2 or x = 1/3. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 3,
+        "b": -7,
+        "c": 2
+      }
+    },
+    {
+      "id": "factor-10",
+      "skill": "factor",
+      "band": 1,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "2x^2+5x+2=0",
+      "type": "roots",
+      "answer": [
+        -0.5,
+        -2.0
+      ],
+      "hints": [
+        "Find two numbers with sum 5 and product 4.",
+        "The expression factors as (2x + 1)(x + 2). Set each factor equal to zero."
+      ],
+      "explanation": "(2x + 1)(x + 2) = 0. Set each factor equal to zero to get x = -1/2 or x = -2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 2,
+        "b": 5,
+        "c": 2
+      }
+    },
+    {
+      "id": "factor-11",
+      "skill": "factor",
+      "band": 1,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "3x^2+2x-1=0",
+      "type": "roots",
+      "answer": [
+        0.3333333333333333,
+        -1.0
+      ],
+      "hints": [
+        "Find two numbers with sum 2 and product -3.",
+        "The expression factors as (3x − 1)(x + 1). Set each factor equal to zero."
+      ],
+      "explanation": "(3x − 1)(x + 1) = 0. Set each factor equal to zero to get x = 1/3 or x = -1. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 3,
+        "b": 2,
+        "c": -1
+      }
+    },
+    {
+      "id": "factor-12",
+      "skill": "factor",
+      "band": 1,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "2x^2-3x-2=0",
+      "type": "roots",
+      "answer": [
+        2.0,
+        -0.5
+      ],
+      "hints": [
+        "Find two numbers with sum -3 and product -4.",
+        "The expression factors as (x − 2)(2x + 1). Set each factor equal to zero."
+      ],
+      "explanation": "(x − 2)(2x + 1) = 0. Set each factor equal to zero to get x = 2 or x = -1/2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 2,
+        "b": -3,
+        "c": -2
+      }
+    },
+    {
+      "id": "factor-13",
+      "skill": "factor",
+      "band": 2,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "6x^2-x-2=0",
+      "type": "roots",
+      "answer": [
+        0.6666666666666666,
+        -0.5
+      ],
+      "hints": [
+        "Find two numbers with sum -1 and product -12.",
+        "The expression factors as (3x − 2)(2x + 1). Set each factor equal to zero."
+      ],
+      "explanation": "(3x − 2)(2x + 1) = 0. Set each factor equal to zero to get x = 2/3 or x = -1/2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 43,
+        "pdfPage": 6,
+        "origin": "textbook-example-adapted",
+        "reference": "Example 4"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 6,
+        "b": -1,
+        "c": -2
+      }
+    },
+    {
+      "id": "factor-14",
+      "skill": "factor",
+      "band": 2,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "6x^2+7x+2=0",
+      "type": "roots",
+      "answer": [
+        -0.5,
+        -0.6666666666666666
+      ],
+      "hints": [
+        "Find two numbers with sum 7 and product 12.",
+        "The expression factors as (2x + 1)(3x + 2). Set each factor equal to zero."
+      ],
+      "explanation": "(2x + 1)(3x + 2) = 0. Set each factor equal to zero to get x = -1/2 or x = -2/3. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 6,
+        "b": 7,
+        "c": 2
+      }
+    },
+    {
+      "id": "factor-15",
+      "skill": "factor",
+      "band": 2,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "4x^2-9=0",
+      "type": "roots",
+      "answer": [
+        1.5,
+        -1.5
+      ],
+      "hints": [
+        "Find two numbers with sum 0 and product -36.",
+        "The expression factors as (2x − 3)(2x + 3). Set each factor equal to zero."
+      ],
+      "explanation": "(2x − 3)(2x + 3) = 0. Set each factor equal to zero to get x = 3/2 or x = -3/2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 4,
+        "b": 0,
+        "c": -9
+      }
+    },
+    {
+      "id": "factor-16",
+      "skill": "factor",
+      "band": 2,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "9x^2-6x+1=0",
+      "type": "roots",
+      "answer": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "hints": [
+        "Find two numbers with sum -6 and product 9.",
+        "The expression factors as (3x − 1)(3x − 1). Set each factor equal to zero."
+      ],
+      "explanation": "(3x − 1)(3x − 1) = 0. Set each factor equal to zero to get x = 1/3 or x = 1/3. Both factors give the same root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 9,
+        "b": -6,
+        "c": 1
+      }
+    },
+    {
+      "id": "factor-17",
+      "skill": "factor",
+      "band": 2,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "8x^2+2x-3=0",
+      "type": "roots",
+      "answer": [
+        0.5,
+        -0.75
+      ],
+      "hints": [
+        "Find two numbers with sum 2 and product -24.",
+        "The expression factors as (2x − 1)(4x + 3). Set each factor equal to zero."
+      ],
+      "explanation": "(2x − 1)(4x + 3) = 0. Set each factor equal to zero to get x = 1/2 or x = -3/4. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 8,
+        "b": 2,
+        "c": -3
+      }
+    },
+    {
+      "id": "factor-18",
+      "skill": "factor",
+      "band": 2,
+      "prompt": "Find all real roots. Separate two roots with a comma.",
+      "math": "6x^2-7x+2=0",
+      "type": "roots",
+      "answer": [
+        0.6666666666666666,
+        0.5
+      ],
+      "hints": [
+        "Find two numbers with sum -7 and product 12.",
+        "The expression factors as (3x − 2)(2x − 1). Set each factor equal to zero."
+      ],
+      "explanation": "(3x − 2)(2x − 1) = 0. Set each factor equal to zero to get x = 2/3 or x = 1/2. Either value makes the original equation true.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 42,
+        "pdfPage": 5,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 6,
+        "b": -7,
+        "c": 2
+      }
+    },
+    {
+      "id": "formula-01",
+      "skill": "formula",
+      "band": 0,
+      "prompt": "Use the quadratic formula to find all real roots.",
+      "math": "x^2-4x+3=0",
+      "type": "roots",
+      "answer": [
+        3.0,
+        1.0
+      ],
+      "hints": [
+        "Identify a, b and c with their signs.",
+        "Compute b² − 4ac, then use both signs in (−b ± √D)/(2a)."
+      ],
+      "explanation": "D = 4. The roots are 3 and 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": -4,
+        "c": 3
+      }
+    },
+    {
+      "id": "formula-02",
+      "skill": "formula",
+      "band": 0,
+      "prompt": "Use the quadratic formula to find all real roots.",
+      "math": "x^2-5x+4=0",
+      "type": "roots",
+      "answer": [
+        4.0,
+        1.0
+      ],
+      "hints": [
+        "Identify a, b and c with their signs.",
+        "Compute b² − 4ac, then use both signs in (−b ± √D)/(2a)."
+      ],
+      "explanation": "D = 9. The roots are 4 and 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": -5,
+        "c": 4
+      }
+    },
+    {
+      "id": "formula-03",
+      "skill": "formula",
+      "band": 0,
+      "prompt": "Use the quadratic formula to find all real roots.",
+      "math": "x^2+x-2=0",
+      "type": "roots",
+      "answer": [
+        1.0,
+        -2.0
+      ],
+      "hints": [
+        "Identify a, b and c with their signs.",
+        "Compute b² − 4ac, then use both signs in (−b ± √D)/(2a)."
+      ],
+      "explanation": "D = 9. The roots are 1 and -2.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": 1,
+        "c": -2
+      }
+    },
+    {
+      "id": "formula-04",
+      "skill": "formula",
+      "band": 0,
+      "prompt": "Use the quadratic formula to find all real roots.",
+      "math": "x^2-6x+5=0",
+      "type": "roots",
+      "answer": [
+        5.0,
+        1.0
+      ],
+      "hints": [
+        "Identify a, b and c with their signs.",
+        "Compute b² − 4ac, then use both signs in (−b ± √D)/(2a)."
+      ],
+      "explanation": "D = 16. The roots are 5 and 1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": -6,
+        "c": 5
+      }
+    },
+    {
+      "id": "formula-05",
+      "skill": "formula",
+      "band": 0,
+      "prompt": "Use the quadratic formula to find all real roots.",
+      "math": "x^2-2x-3=0",
+      "type": "roots",
+      "answer": [
+        3.0,
+        -1.0
+      ],
+      "hints": [
+        "Identify a, b and c with their signs.",
+        "Compute b² − 4ac, then use both signs in (−b ± √D)/(2a)."
+      ],
+      "explanation": "D = 16. The roots are 3 and -1.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": -2,
+        "c": -3
+      }
+    },
+    {
+      "id": "formula-06",
+      "skill": "formula",
+      "band": 0,
+      "prompt": "Use the quadratic formula to find all real roots.",
+      "math": "x^2-25=0",
+      "type": "roots",
+      "answer": [
+        5.0,
+        -5.0
+      ],
+      "hints": [
+        "Identify a, b and c with their signs.",
+        "Compute b² − 4ac, then use both signs in (−b ± √D)/(2a)."
+      ],
+      "explanation": "D = 100. The roots are 5 and -5.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 1,
+        "b": 0,
+        "c": -25
+      }
+    },
+    {
+      "id": "formula-07",
+      "skill": "formula",
+      "band": 1,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "2x^2-6x+3=0",
+      "type": "choice",
+      "answer": "$x=\\frac{6\\pm\\sqrt{12}}{4}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 2, b = -6, c = 3, D = 12. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 2,
+        "b": -6,
+        "c": 3
+      },
+      "choices": [
+        "$x=\\frac{-6\\pm\\sqrt{12}}{4}$",
+        "$x=6\\pm\\sqrt{12}$",
+        "There are no real roots",
+        "$x=\\frac{6\\pm\\sqrt{12}}{4}$"
+      ]
+    },
+    {
+      "id": "formula-08",
+      "skill": "formula",
+      "band": 1,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "x^2-4x+2=0",
+      "type": "choice",
+      "answer": "$x=\\frac{4\\pm\\sqrt{8}}{2}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 1, b = -4, c = 2, D = 8. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 1,
+        "b": -4,
+        "c": 2
+      },
+      "choices": [
+        "$x=\\frac{-4\\pm\\sqrt{8}}{2}$",
+        "$x=4\\pm\\sqrt{8}$",
+        "$x=\\frac{4\\pm\\sqrt{8}}{2}$",
+        "There are no real roots"
+      ]
+    },
+    {
+      "id": "formula-09",
+      "skill": "formula",
+      "band": 1,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "x^2+2x-1=0",
+      "type": "choice",
+      "answer": "$x=\\frac{-2\\pm\\sqrt{8}}{2}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 1, b = 2, c = -1, D = 8. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 1,
+        "b": 2,
+        "c": -1
+      },
+      "choices": [
+        "$x=\\frac{2\\pm\\sqrt{8}}{2}$",
+        "$x=\\frac{-2\\pm\\sqrt{8}}{2}$",
+        "$x=-2\\pm\\sqrt{8}$",
+        "There are no real roots"
+      ]
+    },
+    {
+      "id": "formula-10",
+      "skill": "formula",
+      "band": 1,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "2x^2+2x-1=0",
+      "type": "choice",
+      "answer": "$x=\\frac{-2\\pm\\sqrt{12}}{4}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 2, b = 2, c = -1, D = 12. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 2,
+        "b": 2,
+        "c": -1
+      },
+      "choices": [
+        "$x=\\frac{-2\\pm\\sqrt{12}}{4}$",
+        "$x=\\frac{2\\pm\\sqrt{12}}{4}$",
+        "$x=-2\\pm\\sqrt{12}$",
+        "There are no real roots"
+      ]
+    },
+    {
+      "id": "formula-11",
+      "skill": "formula",
+      "band": 1,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "3x^2-6x+1=0",
+      "type": "choice",
+      "answer": "$x=\\frac{6\\pm\\sqrt{24}}{6}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 3, b = -6, c = 1, D = 24. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 3,
+        "b": -6,
+        "c": 1
+      },
+      "choices": [
+        "$x=\\frac{-6\\pm\\sqrt{24}}{6}$",
+        "$x=6\\pm\\sqrt{24}$",
+        "There are no real roots",
+        "$x=\\frac{6\\pm\\sqrt{24}}{6}$"
+      ]
+    },
+    {
+      "id": "formula-12",
+      "skill": "formula",
+      "band": 1,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "x^2-2x-1=0",
+      "type": "choice",
+      "answer": "$x=\\frac{2\\pm\\sqrt{8}}{2}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 1, b = -2, c = -1, D = 8. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 1,
+        "b": -2,
+        "c": -1
+      },
+      "choices": [
+        "$x=\\frac{-2\\pm\\sqrt{8}}{2}$",
+        "$x=2\\pm\\sqrt{8}$",
+        "$x=\\frac{2\\pm\\sqrt{8}}{2}$",
+        "There are no real roots"
+      ]
+    },
+    {
+      "id": "formula-13",
+      "skill": "formula",
+      "band": 2,
+      "prompt": "Use the quadratic formula to find all real roots.",
+      "math": "3x^2-2x+\\frac{1}{3}=0",
+      "type": "roots",
+      "answer": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "hints": [
+        "Identify a, b and c with their signs.",
+        "Compute b² − 4ac, then use both signs in (−b ± √D)/(2a)."
+      ],
+      "explanation": "D = 0. The roots are 1/3 and 1/3.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "quadratic",
+        "a": 3,
+        "b": -2,
+        "c": 0.3333333333333333
+      }
+    },
+    {
+      "id": "formula-14",
+      "skill": "formula",
+      "band": 2,
+      "prompt": "Use the formula. What can you conclude about real roots?",
+      "math": "2x^2+x+2=0",
+      "type": "choice",
+      "answer": "There are no real roots",
+      "hints": [
+        "Calculate D = b² − 4ac first.",
+        "A negative discriminant has no real square root."
+      ],
+      "explanation": "D = -15 < 0, so there are no real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "no-real",
+        "a": 2,
+        "b": 1,
+        "c": 2
+      },
+      "choices": [
+        "There are no real roots",
+        "The only root is 0",
+        "There are two distinct real roots",
+        "There is one repeated real root"
+      ]
+    },
+    {
+      "id": "formula-15",
+      "skill": "formula",
+      "band": 2,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "3x^2+2x-2=0",
+      "type": "choice",
+      "answer": "$x=\\frac{-2\\pm\\sqrt{28}}{6}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 3, b = 2, c = -2, D = 28. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 3,
+        "b": 2,
+        "c": -2
+      },
+      "choices": [
+        "$x=\\frac{2\\pm\\sqrt{28}}{6}$",
+        "$x=-2\\pm\\sqrt{28}$",
+        "There are no real roots",
+        "$x=\\frac{-2\\pm\\sqrt{28}}{6}$"
+      ]
+    },
+    {
+      "id": "formula-16",
+      "skill": "formula",
+      "band": 2,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "2x^2-2x-3=0",
+      "type": "choice",
+      "answer": "$x=\\frac{2\\pm\\sqrt{28}}{4}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 2, b = -2, c = -3, D = 28. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 2,
+        "b": -2,
+        "c": -3
+      },
+      "choices": [
+        "$x=\\frac{-2\\pm\\sqrt{28}}{4}$",
+        "$x=2\\pm\\sqrt{28}$",
+        "$x=\\frac{2\\pm\\sqrt{28}}{4}$",
+        "There are no real roots"
+      ]
+    },
+    {
+      "id": "formula-17",
+      "skill": "formula",
+      "band": 2,
+      "prompt": "Which expression gives both roots? An unsimplified exact answer is fine.",
+      "math": "4x^2+4x-1=0",
+      "type": "choice",
+      "answer": "$x=\\frac{-4\\pm\\sqrt{32}}{8}$",
+      "hints": [
+        "Calculate D = b² − 4ac.",
+        "The numerator starts with −b, and the whole numerator is divided by 2a."
+      ],
+      "explanation": "a = 4, b = 4, c = -1, D = 32. Substitute into the formula, using both signs.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "formula-choice",
+        "a": 4,
+        "b": 4,
+        "c": -1
+      },
+      "choices": [
+        "$x=\\frac{4\\pm\\sqrt{32}}{8}$",
+        "$x=\\frac{-4\\pm\\sqrt{32}}{8}$",
+        "$x=-4\\pm\\sqrt{32}$",
+        "There are no real roots"
+      ]
+    },
+    {
+      "id": "formula-18",
+      "skill": "formula",
+      "band": 2,
+      "prompt": "Use the formula. What can you conclude about real roots?",
+      "math": "2x^2+3x+4=0",
+      "type": "choice",
+      "answer": "There are no real roots",
+      "hints": [
+        "Calculate D = b² − 4ac first.",
+        "A negative discriminant has no real square root."
+      ],
+      "explanation": "D = -23 < 0, so there are no real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "no-real",
+        "a": 2,
+        "b": 3,
+        "c": 4
+      },
+      "choices": [
+        "There are no real roots",
+        "The only root is 0",
+        "There are two distinct real roots",
+        "There is one repeated real root"
+      ]
+    },
+    {
+      "id": "discriminant-01",
+      "skill": "discriminant",
+      "band": 0,
+      "prompt": "What is the nature of the roots?",
+      "math": "x^2-5x+6=0",
+      "type": "choice",
+      "answer": "Two distinct real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 1. Two distinct real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 1,
+        "b": -5,
+        "c": 6
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-02",
+      "skill": "discriminant",
+      "band": 0,
+      "prompt": "What is the nature of the roots?",
+      "math": "x^2+2x+1=0",
+      "type": "choice",
+      "answer": "One repeated real root",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 0. One repeated real root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 1,
+        "b": 2,
+        "c": 1
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-03",
+      "skill": "discriminant",
+      "band": 0,
+      "prompt": "What is the nature of the roots?",
+      "math": "x^2+4=0",
+      "type": "choice",
+      "answer": "No real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = -16. No real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 1,
+        "b": 0,
+        "c": 4
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-04",
+      "skill": "discriminant",
+      "band": 0,
+      "prompt": "What is the nature of the roots?",
+      "math": "x^2-4=0",
+      "type": "choice",
+      "answer": "Two distinct real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 16. Two distinct real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 1,
+        "b": 0,
+        "c": -4
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-05",
+      "skill": "discriminant",
+      "band": 0,
+      "prompt": "What is the nature of the roots?",
+      "math": "x^2-6x+9=0",
+      "type": "choice",
+      "answer": "One repeated real root",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 0. One repeated real root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 1,
+        "b": -6,
+        "c": 9
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-06",
+      "skill": "discriminant",
+      "band": 1,
+      "prompt": "What is the nature of the roots?",
+      "math": "2x^2-4x+3=0",
+      "type": "choice",
+      "answer": "No real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = -8. No real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 2,
+        "b": -4,
+        "c": 3
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-07",
+      "skill": "discriminant",
+      "band": 1,
+      "prompt": "What is the nature of the roots?",
+      "math": "2x^2-6x+3=0",
+      "type": "choice",
+      "answer": "Two distinct real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 12. Two distinct real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 2,
+        "b": -6,
+        "c": 3
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-08",
+      "skill": "discriminant",
+      "band": 1,
+      "prompt": "What is the nature of the roots?",
+      "math": "3x^2+6x+3=0",
+      "type": "choice",
+      "answer": "One repeated real root",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 0. One repeated real root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 3,
+        "b": 6,
+        "c": 3
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-09",
+      "skill": "discriminant",
+      "band": 1,
+      "prompt": "What is the nature of the roots?",
+      "math": "2x^2+3x+5=0",
+      "type": "choice",
+      "answer": "No real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = -31. No real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 2,
+        "b": 3,
+        "c": 5
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-10",
+      "skill": "discriminant",
+      "band": 1,
+      "prompt": "What is the nature of the roots?",
+      "math": "3x^2+x-2=0",
+      "type": "choice",
+      "answer": "Two distinct real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 25. Two distinct real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 3,
+        "b": 1,
+        "c": -2
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-11",
+      "skill": "discriminant",
+      "band": 2,
+      "prompt": "What is the nature of the roots?",
+      "math": "3x^2-2x+\\frac{1}{3}=0",
+      "type": "choice",
+      "answer": "One repeated real root",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 0. One repeated real root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 3,
+        "b": -2,
+        "c": 0.3333333333333333
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-12",
+      "skill": "discriminant",
+      "band": 2,
+      "prompt": "What is the nature of the roots?",
+      "math": "4x^2-4x+1=0",
+      "type": "choice",
+      "answer": "One repeated real root",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 0. One repeated real root.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 4,
+        "b": -4,
+        "c": 1
+      },
+      "choices": [
+        "Two distinct real roots",
+        "No real roots",
+        "One repeated real root"
+      ]
+    },
+    {
+      "id": "discriminant-13",
+      "skill": "discriminant",
+      "band": 2,
+      "prompt": "What is the nature of the roots?",
+      "math": "6x^2+7x+2=0",
+      "type": "choice",
+      "answer": "Two distinct real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 1. Two distinct real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 6,
+        "b": 7,
+        "c": 2
+      },
+      "choices": [
+        "Two distinct real roots",
+        "One repeated real root",
+        "No real roots"
+      ]
+    },
+    {
+      "id": "discriminant-14",
+      "skill": "discriminant",
+      "band": 2,
+      "prompt": "What is the nature of the roots?",
+      "math": "5x^2+2x+3=0",
+      "type": "choice",
+      "answer": "No real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = -56. No real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 5,
+        "b": 2,
+        "c": 3
+      },
+      "choices": [
+        "Two distinct real roots",
+        "No real roots",
+        "One repeated real root"
+      ]
+    },
+    {
+      "id": "discriminant-15",
+      "skill": "discriminant",
+      "band": 2,
+      "prompt": "What is the nature of the roots?",
+      "math": "2x^2-\\frac{1}{2}=0",
+      "type": "choice",
+      "answer": "Two distinct real roots",
+      "hints": [
+        "Work out D = b² − 4ac, keeping the coefficient signs.",
+        "D > 0: distinct; D = 0: repeated; D < 0: no real roots."
+      ],
+      "explanation": "D = 4. Two distinct real roots.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 45,
+        "pdfPage": 8,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "nature",
+        "a": 2,
+        "b": 0,
+        "c": -0.5
+      },
+      "choices": [
+        "One repeated real root",
+        "No real roots",
+        "Two distinct real roots"
+      ]
+    },
+    {
+      "id": "model-01",
+      "skill": "model",
+      "band": 0,
+      "prompt": "A rectangle has width x metres, length 2 metres more than its width, and area 15 m². Which equation models this?",
+      "math": "",
+      "type": "choice",
+      "answer": "$x(x+2)=15$",
+      "hints": [
+        "Write the length in terms of x.",
+        "Area is width multiplied by length."
+      ],
+      "explanation": "Length = x + 2. Therefore x(x + 2) = 15.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "$x(x+2)=15$",
+        "$x+(x+2)=15$",
+        "$x^2+2=15$",
+        "$2x+2(x+2)=15$"
+      ]
+    },
+    {
+      "id": "model-02",
+      "skill": "model",
+      "band": 0,
+      "prompt": "A rectangle has width x metres, length 3 metres more than its width, and area 28 m². Which equation models this?",
+      "math": "",
+      "type": "choice",
+      "answer": "$x(x+3)=28$",
+      "hints": [
+        "Write the length in terms of x.",
+        "Area is width multiplied by length."
+      ],
+      "explanation": "Length = x + 3. Therefore x(x + 3) = 28.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "$x+(x+3)=28$",
+        "$x^2+3=28$",
+        "$2x+2(x+3)=28$",
+        "$x(x+3)=28$"
+      ]
+    },
+    {
+      "id": "model-03",
+      "skill": "model",
+      "band": 0,
+      "prompt": "A rectangle has width x metres, length 1 metres more than its width, and area 30 m². Which equation models this?",
+      "math": "",
+      "type": "choice",
+      "answer": "$x(x+1)=30$",
+      "hints": [
+        "Write the length in terms of x.",
+        "Area is width multiplied by length."
+      ],
+      "explanation": "Length = x + 1. Therefore x(x + 1) = 30.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "$x+(x+1)=30$",
+        "$x^2+1=30$",
+        "$x(x+1)=30$",
+        "$2x+2(x+1)=30$"
+      ]
+    },
+    {
+      "id": "model-04",
+      "skill": "model",
+      "band": 0,
+      "prompt": "A rectangle has width x metres, length 2 metres more than its width, and area 48 m². Which equation models this?",
+      "math": "",
+      "type": "choice",
+      "answer": "$x(x+2)=48$",
+      "hints": [
+        "Write the length in terms of x.",
+        "Area is width multiplied by length."
+      ],
+      "explanation": "Length = x + 2. Therefore x(x + 2) = 48.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "$x+(x+2)=48$",
+        "$x(x+2)=48$",
+        "$x^2+2=48$",
+        "$2x+2(x+2)=48$"
+      ]
+    },
+    {
+      "id": "model-05",
+      "skill": "model",
+      "band": 0,
+      "prompt": "A rectangle has width x metres, length 4 metres more than its width, and area 77 m². Which equation models this?",
+      "math": "",
+      "type": "choice",
+      "answer": "$x(x+4)=77$",
+      "hints": [
+        "Write the length in terms of x.",
+        "Area is width multiplied by length."
+      ],
+      "explanation": "Length = x + 4. Therefore x(x + 4) = 77.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": null,
+      "choices": [
+        "$x(x+4)=77$",
+        "$x+(x+4)=77$",
+        "$x^2+4=77$",
+        "$2x+2(x+4)=77$"
+      ]
+    },
+    {
+      "id": "model-06",
+      "skill": "model",
+      "band": 1,
+      "prompt": "A rectangle has area 24 m². Its length is 2 m more than its width. Find its width in metres.",
+      "math": "x(x+2)=24",
+      "type": "number",
+      "answer": 4,
+      "hints": [
+        "Move the area to the left and solve the quadratic.",
+        "Reject a negative width. Check width × length equals the area."
+      ],
+      "explanation": "The roots are 4 and -6. A width must be positive, so it is 4 m. Its length is 6 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "rectangle",
+        "w": 4,
+        "extra": 2,
+        "area": 24
+      }
+    },
+    {
+      "id": "model-07",
+      "skill": "model",
+      "band": 1,
+      "prompt": "A rectangle has area 40 m². Its length is 3 m more than its width. Find its width in metres.",
+      "math": "x(x+3)=40",
+      "type": "number",
+      "answer": 5,
+      "hints": [
+        "Move the area to the left and solve the quadratic.",
+        "Reject a negative width. Check width × length equals the area."
+      ],
+      "explanation": "The roots are 5 and -8. A width must be positive, so it is 5 m. Its length is 8 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "rectangle",
+        "w": 5,
+        "extra": 3,
+        "area": 40
+      }
+    },
+    {
+      "id": "model-08",
+      "skill": "model",
+      "band": 1,
+      "prompt": "A rectangle has area 42 m². Its length is 1 m more than its width. Find its width in metres.",
+      "math": "x(x+1)=42",
+      "type": "number",
+      "answer": 6,
+      "hints": [
+        "Move the area to the left and solve the quadratic.",
+        "Reject a negative width. Check width × length equals the area."
+      ],
+      "explanation": "The roots are 6 and -7. A width must be positive, so it is 6 m. Its length is 7 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "rectangle",
+        "w": 6,
+        "extra": 1,
+        "area": 42
+      }
+    },
+    {
+      "id": "model-09",
+      "skill": "model",
+      "band": 1,
+      "prompt": "A rectangle has area 63 m². Its length is 2 m more than its width. Find its width in metres.",
+      "math": "x(x+2)=63",
+      "type": "number",
+      "answer": 7,
+      "hints": [
+        "Move the area to the left and solve the quadratic.",
+        "Reject a negative width. Check width × length equals the area."
+      ],
+      "explanation": "The roots are 7 and -9. A width must be positive, so it is 7 m. Its length is 9 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "rectangle",
+        "w": 7,
+        "extra": 2,
+        "area": 63
+      }
+    },
+    {
+      "id": "model-10",
+      "skill": "model",
+      "band": 1,
+      "prompt": "A rectangle has area 88 m². Its length is 3 m more than its width. Find its width in metres.",
+      "math": "x(x+3)=88",
+      "type": "number",
+      "answer": 8,
+      "hints": [
+        "Move the area to the left and solve the quadratic.",
+        "Reject a negative width. Check width × length equals the area."
+      ],
+      "explanation": "The roots are 8 and -11. A width must be positive, so it is 8 m. Its length is 11 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "rectangle",
+        "w": 8,
+        "extra": 3,
+        "area": 88
+      }
+    },
+    {
+      "id": "model-11",
+      "skill": "model",
+      "band": 1,
+      "prompt": "A rectangle has area 90 m². Its length is 1 m more than its width. Find its width in metres.",
+      "math": "x(x+1)=90",
+      "type": "number",
+      "answer": 9,
+      "hints": [
+        "Move the area to the left and solve the quadratic.",
+        "Reject a negative width. Check width × length equals the area."
+      ],
+      "explanation": "The roots are 9 and -10. A width must be positive, so it is 9 m. Its length is 10 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "rectangle",
+        "w": 9,
+        "extra": 1,
+        "area": 90
+      }
+    },
+    {
+      "id": "model-12",
+      "skill": "model",
+      "band": 2,
+      "prompt": "A rectangular hall has area 300 m². Its length is 1 m more than 2 times its width. Find its length in metres.",
+      "math": "x(2x+1)=300\\quad\text{where }x\text{ is the width}",
+      "type": "number",
+      "answer": 25,
+      "hints": [
+        "Solve for x, remembering x is the width.",
+        "Reject the negative width, then calculate the requested length."
+      ],
+      "explanation": "The positive width is 12 m. The length is 2 × 12 + 1 = 25 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "textbook-example-adapted",
+        "reference": "Example 6"
+      },
+      "check": {
+        "kind": "hall",
+        "w": 12,
+        "k": 2,
+        "extra": 1,
+        "area": 300
+      }
+    },
+    {
+      "id": "model-13",
+      "skill": "model",
+      "band": 2,
+      "prompt": "A rectangular hall has area 144 m². Its length is 2 m more than 2 times its width. Find its length in metres.",
+      "math": "x(2x+2)=144\\quad\text{where }x\text{ is the width}",
+      "type": "number",
+      "answer": 18,
+      "hints": [
+        "Solve for x, remembering x is the width.",
+        "Reject the negative width, then calculate the requested length."
+      ],
+      "explanation": "The positive width is 8 m. The length is 2 × 8 + 2 = 18 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "hall",
+        "w": 8,
+        "k": 2,
+        "extra": 2,
+        "area": 144
+      }
+    },
+    {
+      "id": "model-14",
+      "skill": "model",
+      "band": 2,
+      "prompt": "A rectangular hall has area 80 m². Its length is 1 m more than 3 times its width. Find its length in metres.",
+      "math": "x(3x+1)=80\\quad\text{where }x\text{ is the width}",
+      "type": "number",
+      "answer": 16,
+      "hints": [
+        "Solve for x, remembering x is the width.",
+        "Reject the negative width, then calculate the requested length."
+      ],
+      "explanation": "The positive width is 5 m. The length is 3 × 5 + 1 = 16 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "hall",
+        "w": 5,
+        "k": 3,
+        "extra": 1,
+        "area": 80
+      }
+    },
+    {
+      "id": "model-15",
+      "skill": "model",
+      "band": 2,
+      "prompt": "A rectangular hall has area 90 m². Its length is 3 m more than 2 times its width. Find its length in metres.",
+      "math": "x(2x+3)=90\\quad\text{where }x\text{ is the width}",
+      "type": "number",
+      "answer": 15,
+      "hints": [
+        "Solve for x, remembering x is the width.",
+        "Reject the negative width, then calculate the requested length."
+      ],
+      "explanation": "The positive width is 6 m. The length is 2 × 6 + 3 = 15 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "hall",
+        "w": 6,
+        "k": 2,
+        "extra": 3,
+        "area": 90
+      }
+    },
+    {
+      "id": "model-16",
+      "skill": "model",
+      "band": 2,
+      "prompt": "A rectangular hall has area 161 m². Its length is 2 m more than 3 times its width. Find its length in metres.",
+      "math": "x(3x+2)=161\\quad\text{where }x\text{ is the width}",
+      "type": "number",
+      "answer": 23,
+      "hints": [
+        "Solve for x, remembering x is the width.",
+        "Reject the negative width, then calculate the requested length."
+      ],
+      "explanation": "The positive width is 7 m. The length is 3 × 7 + 2 = 23 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "hall",
+        "w": 7,
+        "k": 3,
+        "extra": 2,
+        "area": 161
+      }
+    },
+    {
+      "id": "model-17",
+      "skill": "model",
+      "band": 2,
+      "prompt": "A rectangular hall has area 171 m². Its length is 1 m more than 2 times its width. Find its length in metres.",
+      "math": "x(2x+1)=171\\quad\text{where }x\text{ is the width}",
+      "type": "number",
+      "answer": 19,
+      "hints": [
+        "Solve for x, remembering x is the width.",
+        "Reject the negative width, then calculate the requested length."
+      ],
+      "explanation": "The positive width is 9 m. The length is 2 × 9 + 1 = 19 m.",
+      "source": {
+        "id": "chapter4",
+        "printedPage": 44,
+        "pdfPage": 7,
+        "origin": "authored-variant"
+      },
+      "check": {
+        "kind": "hall",
+        "w": 9,
+        "k": 2,
+        "extra": 1,
+        "area": 171
+      }
+    }
+  ]
+}
