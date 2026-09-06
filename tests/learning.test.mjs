@@ -301,3 +301,89 @@ test('serialised state preserves the original return question during a repair', 
   assert.equal(restored.active.saved.qid, qid);
   assert.deepEqual(engine.view(restored, NOW), engine.view(s, NOW));
 });
+
+test('finishing a supported session visibly updates that milestone without falsely claiming independent completion', () => {
+  let s = ready('factor');
+  for (let i = 0; i < 6; i++) {
+    s = step(s, 'hint');
+    s = solve(s);
+    s = step(s, 'continue');
+  }
+  const milestone = engine.view(s, NOW).skills.find((x) => x.id === 'factor');
+  assert.equal(s.active.stage, 'complete');
+  assert.equal(milestone.progress.completed, false);
+  assert.equal(
+    milestone.progress.sessionsCompleted,
+    1,
+    'Path should show the completed practice session',
+  );
+  assert.equal(milestone.progress.status, 'practised');
+});
+
+test('milestone progress updates on the sixth solved answer, before the final Continue click', () => {
+  let s = ready('factor');
+  for (let i = 0; i < 6; i++) {
+    s = step(s, 'hint');
+    s = solve(s);
+    if (i < 5) s = step(s, 'continue');
+  }
+  assert.equal(s.active.stage, 'feedback');
+  assert.equal(
+    engine.view(s, NOW).skills.find((x) => x.id === 'factor').progress.status,
+    'practised',
+  );
+  assert.equal(s.sessionsCompleted, 1);
+  s = step(s, 'continue');
+  assert.equal(s.sessionsCompleted, 1);
+});
+
+test('legacy progress exposes the saved band and checkpoint without inventing mastery', () => {
+  const s = engine.freshState();
+  s.progress.recognise = {
+    band: 1,
+    window: [{ correct: true, band: 1 }],
+    independent: 4,
+    attempts: 6,
+    helped: 2,
+    introduced: true,
+    completed: false,
+    dueAt: 0,
+    lastAt: NOW,
+  };
+  const p = engine
+    .view(s, NOW)
+    .skills.find((x) => x.id === 'recognise').progress;
+  assert.equal(p.status, 'in-progress');
+  assert.deepEqual(p.checkpoint.results, [true, null, null]);
+  assert.equal(p.checkpoint.correct, 1);
+  assert.equal(p.completed, false);
+});
+
+test('a repair on the last question still leads to a fresh transfer before completing practice', () => {
+  let s = ready('factor');
+  for (let i = 0; i < 5; i++) {
+    s = solve(s);
+    s = step(s, 'continue');
+  }
+  s = wrong(s);
+  s = step(s, 'continue');
+  s = wrong(s);
+  s = step(s, 'continue');
+  s = wrong(s);
+  s = step(s, 'continue');
+  s = step(s, 'continue');
+  s = solve(s);
+  s = step(s, 'continue');
+  s = solve(s);
+  s = step(s, 'continue');
+  assert.equal(s.active.role, 'retry');
+  s = solve(s);
+  s = step(s, 'continue');
+  assert.equal(s.active.role, 'transfer');
+  assert.equal(s.active.stage, 'question');
+  assert.equal(s.sessionsCompleted, 0);
+  s = solve(s);
+  assert.equal(s.sessionsCompleted, 1);
+  s = step(s, 'continue');
+  assert.equal(s.active.stage, 'complete');
+});

@@ -1873,3 +1873,104 @@ button:focus-visible,
 .auth-foot {
   font-size: 0.8rem;
 }
+.milestone-progress {
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+  padding-top: 14px;
+  text-align: left;
+}
+.milestone-progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.milestone-progress-heading > span:last-child {
+  font-size: 0.8rem;
+  color: #667085;
+}
+.checkpoint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.checkpoint-slots {
+  display: flex;
+  gap: 6px;
+}
+.checkpoint-slots span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  background: #fffdf8;
+  color: #667085;
+}
+.checkpoint-slots .passed {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #b6ddcd;
+}
+.checkpoint-slots .retry {
+  background: #fffbeb;
+  color: #b45309;
+  border-color: #dfc8a9;
+}
+.checkpoint > span,
+.milestone-evidence {
+  font-size: 0.75rem;
+  color: #667085;
+}
+.milestone-progress p {
+  font-size: 0.8rem !important;
+  line-height: 1.65 !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 !important;
+  color: #667085;
+}
+.milestone-evidence {
+  display: block;
+}
+.milestone-celebration {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fffdf8;
+  border: 1px solid #b6ddcd;
+  color: #047857;
+  padding: 14px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+.milestone-celebration div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.milestone-celebration span {
+  font-size: 0.8rem;
+}
+.completion > .milestone-progress {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  margin: 24px 0;
+}
+.skill-row {
+  align-items: flex-start;
+}
+.skill-row .milestone-progress {
+  border: 0;
+  padding: 0;
+  margin: 12px 0 0;
+}

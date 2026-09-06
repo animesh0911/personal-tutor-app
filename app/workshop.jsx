@@ -93,6 +93,77 @@ function Secondary({ children, ...props }) {
 function Badge({ children, tone = '' }) {
   return <span className={`badge ${tone}`}>{children}</span>;
 }
+const statusLabels = {
+  new: 'Not started',
+  'in-progress': 'In progress',
+  practised: 'Practised',
+  completed: 'Completed',
+};
+function MilestoneProgress({ progress, bands }) {
+  const checkpoint = progress.checkpoint || {
+    correct: 0,
+    attempted: 0,
+    results: [null, null, null],
+  };
+  return (
+    <div className="milestone-progress">
+      <div className="milestone-progress-heading">
+        <Badge tone={progress.completed ? 'green' : 'teal'}>
+          {statusLabels[progress.status] || 'In progress'}
+        </Badge>
+        <span>{bands[progress.band]} practice</span>
+      </div>
+      {progress.completed ? (
+        <p>
+          <CheckCircle2 size={16} /> Milestone completed. Stretch practice is
+          optional.
+        </p>
+      ) : (
+        <>
+          <div className="checkpoint">
+            <div
+              className="checkpoint-slots"
+              aria-label={`${checkpoint.correct} correct from ${checkpoint.attempted} independent answers in this checkpoint`}
+            >
+              {checkpoint.results.map((r, i) => (
+                <span
+                  key={i}
+                  className={
+                    r === true ? 'passed' : r === false ? 'retry' : 'pending'
+                  }
+                  aria-label={
+                    r === true
+                      ? 'Correct'
+                      : r === false
+                        ? 'Needs practice'
+                        : 'Not answered'
+                  }
+                >
+                  {r === true ? '✓' : r === false ? '↻' : '·'}
+                </span>
+              ))}
+            </div>
+            <span>
+              {checkpoint.correct}/3 correct · {checkpoint.attempted}/3 checked
+            </span>
+          </div>
+          <p>
+            {progress.band === 0
+              ? 'Get 3/3 independently to move to Standard.'
+              : 'Get 3/3 independently at Standard to complete this milestone.'}{' '}
+            Hints help you learn; hinted answers don’t fill this checkpoint.
+          </p>
+        </>
+      )}
+      <span className="milestone-evidence">
+        {progress.solved || 0} different questions solved
+        {progress.sessionsCompleted
+          ? ` · ${progress.sessionsCompleted} practice session${progress.sessionsCompleted === 1 ? '' : 's'} completed`
+          : ''}
+      </span>
+    </div>
+  );
+}
 const buttonLabels = {
   retry: 'Try again',
   probe: 'Continue',
@@ -533,12 +604,18 @@ export default function Workshop() {
             )}
           </div>
           <span className="eyebrow">
-            {a.endReason === 'pause' ? 'PROGRESS SAVED' : 'PRACTICE COMPLETE'}
+            {a.endReason === 'pause'
+              ? 'PROGRESS SAVED'
+              : data.progress[a.target]?.completed
+                ? 'MILESTONE COMPLETED'
+                : 'PRACTICE COMPLETE'}
           </span>
           <h1 ref={heading} tabIndex={-1}>
             {a.endReason === 'pause'
               ? 'A good place to pause.'
-              : 'Small steps. Real progress.'}
+              : data.progress[a.target]?.completed
+                ? `${a.targetInfo.title}: completed!`
+                : 'Practice saved. Confidence growing.'}
           </h1>
           <p>
             {a.endReason === 'pause'
@@ -563,8 +640,12 @@ export default function Workshop() {
                 : 'Practice builds confidence. A few correct answers don’t tell the whole story—we’ll keep checking as you learn.'}
             </p>
           </div>
-          <Primary onClick={() => navigate('play')}>
-            Back to my workshop <ArrowRight size={20} />
+          <MilestoneProgress
+            progress={data.progress[a.target]}
+            bands={data.bands}
+          />
+          <Primary onClick={() => navigate('path')}>
+            See my updated path <ArrowRight size={20} />
           </Primary>
           <a className="text-link" href="#path">
             Explore another milestone
@@ -582,12 +663,14 @@ export default function Workshop() {
             <ArrowLeft size={18} /> Save & exit
           </Button>
           <span>
-            Question {Math.min(a.done + 1, a.goal)} of {a.goal}
+            {a.role === 'transfer' && a.done >= a.goal
+              ? 'Final check after your repair'
+              : `Question ${Math.min(a.done + 1, a.goal)} of ${a.goal}`}
             {support ? ' · building block' : ''}
           </span>
         </div>
         <Progress
-          value={(a.done / a.goal) * 100}
+          value={Math.min(100, (a.done / a.goal) * 100)}
           aria-label={`${a.done} of ${a.goal} questions solved`}
           className="quest-progress"
         />
@@ -737,6 +820,23 @@ export default function Workshop() {
                         )}
                       </div>
                       <p>{feedback.message}</p>
+                      {feedback.milestoneCompleted && (
+                        <div className="milestone-celebration">
+                          <CheckCircle2 size={22} />
+                          <div>
+                            <strong>Milestone completed!</strong>
+                            <span>
+                              {a.targetInfo.title} now has a check on your Path.
+                            </span>
+                          </div>
+                        </div>
+                      )}
+                      {feedback.correct && !support && (
+                        <MilestoneProgress
+                          progress={data.progress[a.target]}
+                          bands={data.bands}
+                        />
+                      )}
                       <Primary
                         type="button"
                         disabled={busy}
@@ -744,9 +844,11 @@ export default function Workshop() {
                       >
                         {busy
                           ? 'Saving…'
-                          : feedback.next === 'next' && a.done >= a.goal
-                            ? 'See my progress'
-                            : buttonLabels[feedback.next]}
+                          : feedback.next === 'next' && a.returnTransfer
+                            ? 'Try a fresh question'
+                            : feedback.next === 'next' && a.done >= a.goal
+                              ? 'See my progress'
+                              : buttonLabels[feedback.next]}
                         <ArrowRight size={20} />
                       </Primary>
                     </output>
@@ -854,12 +956,10 @@ export default function Workshop() {
                         {data.reviewDue ? 'Refresh due' : 'Try this next'}
                       </Badge>
                     )}
-                    {s.progress.completed && (
-                      <Badge tone="green">Completed</Badge>
-                    )}
                   </div>
                   <h2>{s.title}</h2>
                   <p>{s.tagline}</p>
+                  <MilestoneProgress progress={s.progress} bands={data.bands} />
                   <Button
                     className={
                       s.id === data.recommended ? 'primary' : 'secondary'
@@ -956,6 +1056,10 @@ export default function Workshop() {
                         ? `${s.progress.independent} independent successes · ${data.bands[s.progress.band]} practice`
                         : 'A new discovery waiting for you'}
                     </p>
+                    <MilestoneProgress
+                      progress={s.progress}
+                      bands={data.bands}
+                    />
                   </div>
                   <Button
                     variant="ghost"
@@ -1136,11 +1240,20 @@ export default function Workshop() {
               </span>
               <strong>{s.title}</strong>
               <span>
-                {s.progress.completed
-                  ? 'Completed'
-                  : s.id === data.recommended
-                    ? 'Try this next'
-                    : 'Explore anytime'}
+                {statusLabels[s.progress.status] || 'Not started'}
+                {s.progress.status !== 'new' && !s.progress.completed && (
+                  <>
+                    <br />
+                    {data.bands[s.progress.band]} ·{' '}
+                    {s.progress.checkpoint.correct}/3 correct
+                  </>
+                )}
+                {s.progress.solved > 0 && (
+                  <>
+                    <br />
+                    {s.progress.solved} questions solved
+                  </>
+                )}
               </span>
             </button>
           ))}
