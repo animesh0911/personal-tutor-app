@@ -20,52 +20,14 @@ import {
   User,
   X,
 } from 'lucide-react';
-import katex from 'katex';
-import 'katex/dist/katex.min.css';
+import { MathText, Rich } from '@/components/learning/math-text';
+import { LearningVisual } from '@/components/learning/learning-visual';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-function MathText({ value, block = false }) {
-  let html;
-  if (value) {
-    try {
-      html = katex.renderToString(value, {
-        throwOnError: false,
-        displayMode: block,
-        trust: false,
-        output: 'htmlAndMathml',
-      });
-    } catch {}
-  }
-  return value ? (
-    html ? (
-      <span
-        className={block ? 'math-block' : 'math-inline'}
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    ) : (
-      <span>{value}</span>
-    )
-  ) : null;
-}
-function Rich({ text = '' }) {
-  return (
-    <>
-      {text
-        .split(/(\$[^$]+\$)/g)
-        .map((part, i) =>
-          part.startsWith('$') ? (
-            <MathText key={i} value={part.slice(1, -1)} />
-          ) : (
-            <span key={i}>{part}</span>
-          ),
-        )}
-    </>
-  );
-}
 function Brand() {
   return (
     <a className="brand" href="#play" aria-label="Curious Workshop home">
@@ -699,18 +661,25 @@ export default function Workshop() {
             {isLesson ? (
               <>
                 <p className="lesson-explanation">{a.lesson.explanation}</p>
+                <LearningVisual
+                  key={`${a.skill}-${a.stage}`}
+                  spec={a.lesson.visual}
+                />
                 <div className="example-board">
                   <span className="board-label">WORKED EXAMPLE</span>
                   <MathText value={a.lesson.example} block />
                 </div>
-                <ol className="explanation-steps">
-                  {a.lesson.steps.map((step, i) => (
-                    <li key={i}>
-                      <span>{i + 1}</span>
-                      <p>{step}</p>
-                    </li>
-                  ))}
-                </ol>
+                <details className="worked-steps">
+                  <summary>Read the worked steps</summary>
+                  <ol className="explanation-steps">
+                    {a.lesson.steps.map((step, i) => (
+                      <li key={i}>
+                        <span>{i + 1}</span>
+                        <p>{step}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </details>
                 <div className="action-tray">
                   <Primary disabled={busy} onClick={() => send('continue')}>
                     {busy
@@ -803,6 +772,7 @@ export default function Workshop() {
                       </div>
                     </div>
                   )}
+                  {q?.visual && <LearningVisual key={q.id} spec={q.visual} />}
                   {a.stage === 'feedback' ? (
                     <output
                       className={`feedback ${feedback.correct ? 'success' : 'support'}`}

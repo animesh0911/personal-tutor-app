@@ -59,3 +59,11 @@ Custom registration/sign-in uses salted PBKDF2 password hashing, opaque server s
 - `app/api/workshop/route.ts`: registration, login, session and progress API.
 - `db/schema.ts` and `drizzle/`: durable schema and migration.
 - `tests/`: mathematical, adaptive-route and API checks.
+
+## Visual teaching
+
+All 13 lessons and 154 questions now carry a versioned numerical visual specification. KaTeX renders notation; JSXGraph is loaded on demand for function plots; native SVG and HTML models handle squares, area, coefficients, factor grids and balancing. The renderer accepts only the supported numerical vocabulary; it never executes generated expressions or diagram code. JSXGraph's bundled parser is not called by the application.
+
+Lesson introductions and repair lessons include interactive models. Question-specific models are returned only after a hint, failed attempt or submitted answer. Exploration does not issue scoring commands, award XP, or create independent mastery evidence. Existing content version 2026-09-05.1 upgrades compatibly without resetting learner state. Written worked steps and original-example descriptions remain available alongside keyboard-accessible controls. Graph labels round to three decimals.
+
+The numerical/content tests cover every visual, coefficient consistency, roots, factor pairs, answer concealment and saved-progress compatibility. Browser interaction and visual QA remain unverified. JSXGraph adds a sizeable lazy-loaded chunk; no plotting download is needed until a graph mounts.

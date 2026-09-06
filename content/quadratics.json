@@ -1,6 +1,6 @@
 {
   "id": "ncert-x-quadratics",
-  "version": "2026-09-05.1",
+  "version": "2026-09-06.2",
   "title": "Quadratic equations",
   "grade": 10,
   "reviewStatus": "Prototype: source checked and programmatically validated; independent teacher review pending",
@@ -59,7 +59,13 @@
           "In (−4)², both factors are −4, so the product is +16.",
           "In −4², square 4 first, then apply the minus sign.",
           "Keep the brackets when substituting a negative coefficient."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "signed_square",
+          "alt": "A grid of unit squares shows the square of a number. The geometric side length is the absolute value of that number.",
+          "n": -4
+        }
       }
     },
     {
@@ -87,7 +93,15 @@
           "A missing x term has coefficient 0.",
           "The coefficient of x² is 1 when no number is written.",
           "The sign immediately before a term belongs to its coefficient."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "coefficient_cards",
+          "alt": "The coefficients of 2x² − 5x + 3 are 2, −5 and 3. The minus sign belongs to the x coefficient.",
+          "a": 2,
+          "b": -5,
+          "c": 3
+        }
       }
     },
     {
@@ -114,7 +128,17 @@
           "Put brackets around the value you substitute.",
           "Calculate x² before multiplying it by its coefficient.",
           "If the final value is zero, the number is a root of p(x) = 0."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "quadratic_plot",
+          "alt": "Graph of y = 2x² + (-3)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+          "a": 2,
+          "b": -3,
+          "c": 1,
+          "mode": "substitution",
+          "x": 1
+        }
       }
     },
     {
@@ -142,7 +166,14 @@
           "List factor pairs of a × c.",
           "Choose signs so the product is right.",
           "Check the sum as well. Both conditions must work."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "factor_pair",
+          "alt": "Find two numbers whose sum is −5 and product is 6. Test the sum and product separately.",
+          "sum": -5,
+          "product": 6
+        }
       }
     },
     {
@@ -167,7 +198,18 @@
           "A product can be zero because the first factor is zero.",
           "It can also be zero because the second factor is zero.",
           "This shortcut applies to a product equal to zero, not a sum or a nonzero product."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "zero_product",
+          "alt": "For (x − 2)(x − 3), either factor can make the product zero. The roots are 2 and 3.",
+          "factors": [
+            1,
+            -2,
+            1,
+            -3
+          ]
+        }
       }
     },
     {
@@ -193,7 +235,14 @@
           "Add 3 to both sides.",
           "Divide both sides by 2.",
           "Check: 2 × (3/2) − 3 = 0."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "linear_balance",
+          "alt": "Solve 2x − 3 = 0 by adding 3 to both sides, then dividing both sides by 2.",
+          "a": 2,
+          "b": -3
+        }
       }
     },
     {
@@ -215,12 +264,19 @@
       },
       "lesson": {
         "explanation": "The square-root symbol means the non-negative square root. The ± sign gives two branches. Divide the whole numerator by the denominator.",
-        "example": "\\frac{4\\pm\\sqrt{16}}{2}=\\frac{4\\pm4}{2}\\quad\\Rightarrow\\quad 4\\ \\text{or}\\ 0",
+        "example": "\\frac{\\sqrt{16}}{2}=\\frac{4}{2}=2",
         "steps": [
-          "Find the square root first: √16 = 4.",
-          "Calculate the plus and minus branches separately.",
-          "When a root is not an integer, keep it exact as a surd, or use the stated decimal accuracy."
-        ]
+          "A 4 by 4 square has 16 unit squares, so √16 = 4.",
+          "The square-root symbol gives the non-negative root.",
+          "Divide the whole numerator by the denominator: 4 ÷ 2 = 2."
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "square_root",
+          "alt": "A 4 by 4 grid has 16 unit squares. The nonnegative square root of 16 is 4; dividing 4 by 2 gives 2.",
+          "n": 16,
+          "d": 2
+        }
       }
     },
     {
@@ -248,7 +304,19 @@
           "Expand both sides: x² + x + 8 = x² − 4.",
           "Subtract x² from both sides. The square terms cancel.",
           "The remaining equation is linear. Seeing x² at the start is not enough."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "polynomial_terms",
+          "alt": "After expanding x(x + 1) + 8 = (x + 2)(x − 2), the x² terms cancel. The remaining equation x + 12 = 0 is linear.",
+          "original": "x(x+1)+8=(x+2)(x-2)",
+          "terms": [
+            12,
+            1,
+            0,
+            0
+          ]
+        }
       }
     },
     {
@@ -276,7 +344,17 @@
           "Replace every x with 1.",
           "The left side is 2 − 3 + 1 = 0, so 1 is a root.",
           "A quadratic has at most two distinct real roots. A repeated root has just one distinct value."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "quadratic_plot",
+          "alt": "Graph of y = 2x² + (-3)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+          "a": 2,
+          "b": -3,
+          "c": 1,
+          "mode": "roots",
+          "x": 1
+        }
       }
     },
     {
@@ -307,7 +385,18 @@
           "Find numbers with product 2 × 3 = 6 and sum −5: −2 and −3.",
           "Split and group: 2x² − 2x − 3x + 3 = 2x(x − 1) − 3(x − 1).",
           "Factor: (2x − 3)(x − 1) = 0. Set each factor to zero: x = 3/2 or x = 1."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "factor_grid",
+          "alt": "A multiplication grid expands (2x − 3)(x − 1) into 2x² − 2x − 3x + 3, giving 2x² − 5x + 3.",
+          "factors": [
+            2,
+            -3,
+            1,
+            -1
+          ]
+        }
       }
     },
     {
@@ -336,7 +425,16 @@
           "For x² − 4x + 2 = 0, a = 1, b = −4, c = 2.",
           "D = (−4)² − 4 × 1 × 2 = 8.",
           "x = (4 ± √8)/2 = 2 ± √2. The entire numerator is divided by 2a."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "formula_steps",
+          "alt": "For x² − 4x + 2 = 0, a is 1, b is −4, c is 2 and the discriminant is 8. The roots are 2 plus or minus the square root of 2.",
+          "a": 1,
+          "b": -4,
+          "c": 2,
+          "mode": "roots"
+        }
       }
     },
     {
@@ -365,7 +463,17 @@
           "Positive: two different real roots. They need not be integers.",
           "Zero: two equal roots, or one distinct repeated value.",
           "Negative: no real roots. This chapter works with real numbers."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "quadratic_plot",
+          "alt": "Graph of y = 1x² + (-4)x + (3). A real root is an x-value where the graph meets the horizontal axis.",
+          "a": 1,
+          "b": -4,
+          "c": 3,
+          "mode": "discriminant",
+          "x": 0
+        }
       }
     },
     {
@@ -397,7 +505,15 @@
           "The equation is 2x² + x − 300 = 0.",
           "Factor: (x − 12)(2x + 25) = 0, so x = 12 or −12.5.",
           "A width cannot be negative. The width is 12 m and the length is 25 m."
-        ]
+        ],
+        "visual": {
+          "version": 1,
+          "kind": "rectangle_area",
+          "alt": "A hall has width x and length 2x + 1 metres. Adjust the positive width until the area reaches 300 square metres.",
+          "k": 2,
+          "extra": 1,
+          "area": 300
+        }
       }
     }
   ],
@@ -424,6 +540,12 @@
       "check": {
         "kind": "square",
         "n": -2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-2) × (-2) = 4.",
+        "n": -2
       }
     },
     {
@@ -447,6 +569,12 @@
       },
       "check": {
         "kind": "square",
+        "n": -3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-3) × (-3) = 9.",
         "n": -3
       }
     },
@@ -472,6 +600,12 @@
       "check": {
         "kind": "square",
         "n": -4
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-4) × (-4) = 16.",
+        "n": -4
       }
     },
     {
@@ -495,6 +629,12 @@
       },
       "check": {
         "kind": "square",
+        "n": -5
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-5) × (-5) = 25.",
         "n": -5
       }
     },
@@ -520,6 +660,12 @@
       "check": {
         "kind": "square",
         "n": -6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-6) × (-6) = 36.",
+        "n": -6
       }
     },
     {
@@ -543,6 +689,12 @@
       },
       "check": {
         "kind": "square",
+        "n": -7
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-7) × (-7) = 49.",
         "n": -7
       }
     },
@@ -568,6 +720,12 @@
       "check": {
         "kind": "square",
         "n": -8
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-8) × (-8) = 64.",
+        "n": -8
       }
     },
     {
@@ -591,6 +749,12 @@
       },
       "check": {
         "kind": "square",
+        "n": -9
+      },
+      "visual": {
+        "version": 1,
+        "kind": "signed_square",
+        "alt": "(-9) × (-9) = 81.",
         "n": -9
       }
     },
@@ -625,7 +789,15 @@
         "-3",
         "3",
         "−1"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = -3.",
+        "a": 1,
+        "b": -3,
+        "c": 2
+      }
     },
     {
       "id": "coefficients-02",
@@ -658,7 +830,15 @@
         "5",
         "−1",
         "-5"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = -5.",
+        "a": 2,
+        "b": -5,
+        "c": 3
+      }
     },
     {
       "id": "coefficients-03",
@@ -691,7 +871,15 @@
         "-2",
         "-4",
         "−1"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = 4.",
+        "a": 3,
+        "b": 4,
+        "c": -2
+      }
     },
     {
       "id": "coefficients-04",
@@ -723,7 +911,15 @@
         "-9",
         "0",
         "−1"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = 0.",
+        "a": 1,
+        "b": 0,
+        "c": -9
+      }
     },
     {
       "id": "coefficients-05",
@@ -756,7 +952,15 @@
         "0",
         "1",
         "−1"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = -1.",
+        "a": 4,
+        "b": -1,
+        "c": 0
+      }
     },
     {
       "id": "coefficients-06",
@@ -789,7 +993,15 @@
         "7",
         "-7",
         "−1"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = 7.",
+        "a": 2,
+        "b": 7,
+        "c": -4
+      }
     },
     {
       "id": "coefficients-07",
@@ -822,7 +1034,15 @@
         "6",
         "−1",
         "-6"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = -6.",
+        "a": 5,
+        "b": -6,
+        "c": 1
+      }
     },
     {
       "id": "coefficients-08",
@@ -855,7 +1075,15 @@
         "0",
         "-2",
         "−1"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "coefficient_cards",
+        "alt": "The x coefficient is b = 2.",
+        "a": 1,
+        "b": 2,
+        "c": 0
+      }
     },
     {
       "id": "substitute-01",
@@ -881,6 +1109,16 @@
         "a": 1,
         "b": -5,
         "c": 6,
+        "x": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-5)x + (6). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "mode": "substitution",
         "x": 2
       }
     },
@@ -909,6 +1147,16 @@
         "b": 2,
         "c": 1,
         "x": -1
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (2)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": 2,
+        "c": 1,
+        "mode": "substitution",
+        "x": -1
       }
     },
     {
@@ -935,6 +1183,16 @@
         "a": 2,
         "b": -3,
         "c": 1,
+        "x": 0
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (-3)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": -3,
+        "c": 1,
+        "mode": "substitution",
         "x": 0
       }
     },
@@ -963,6 +1221,16 @@
         "b": -3,
         "c": -10,
         "x": 5
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-3)x + (-10). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -3,
+        "c": -10,
+        "mode": "substitution",
+        "x": 5
       }
     },
     {
@@ -989,6 +1257,16 @@
         "a": 2,
         "b": 1,
         "c": -6,
+        "x": -2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (1)x + (-6). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": 1,
+        "c": -6,
+        "mode": "substitution",
         "x": -2
       }
     },
@@ -1017,6 +1295,16 @@
         "b": 0,
         "c": -9,
         "x": -3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (0)x + (-9). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": 0,
+        "c": -9,
+        "mode": "substitution",
+        "x": -3
       }
     },
     {
@@ -1043,6 +1331,16 @@
         "a": 1,
         "b": -4,
         "c": 4,
+        "x": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-4)x + (4). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -4,
+        "c": 4,
+        "mode": "substitution",
         "x": 2
       }
     },
@@ -1071,6 +1369,16 @@
         "b": -5,
         "c": 3,
         "x": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (-5)x + (3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": -5,
+        "c": 3,
+        "mode": "substitution",
+        "x": 2
       }
     },
     {
@@ -1097,6 +1405,13 @@
       },
       "check": {
         "kind": "pair",
+        "sum": -5,
+        "product": 6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "-2 + (-3) = -5, and (-2) × (-3) = 6.",
         "sum": -5,
         "product": 6
       }
@@ -1127,6 +1442,13 @@
         "kind": "pair",
         "sum": 6,
         "product": 8
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "2 + (4) = 6, and (2) × (4) = 8.",
+        "sum": 6,
+        "product": 8
       }
     },
     {
@@ -1153,6 +1475,13 @@
       },
       "check": {
         "kind": "pair",
+        "sum": 5,
+        "product": -6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "-1 + (6) = 5, and (-1) × (6) = -6.",
         "sum": 5,
         "product": -6
       }
@@ -1183,6 +1512,13 @@
         "kind": "pair",
         "sum": -7,
         "product": 12
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "-4 + (-3) = -7, and (-4) × (-3) = 12.",
+        "sum": -7,
+        "product": 12
       }
     },
     {
@@ -1209,6 +1545,13 @@
       },
       "check": {
         "kind": "pair",
+        "sum": -2,
+        "product": -15
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "3 + (-5) = -2, and (3) × (-5) = -15.",
         "sum": -2,
         "product": -15
       }
@@ -1239,6 +1582,13 @@
         "kind": "pair",
         "sum": 5,
         "product": -14
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "-2 + (7) = 5, and (-2) × (7) = -14.",
+        "sum": 5,
+        "product": -14
       }
     },
     {
@@ -1265,6 +1615,13 @@
       },
       "check": {
         "kind": "pair",
+        "sum": -11,
+        "product": 30
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "-5 + (-6) = -11, and (-5) × (-6) = 30.",
         "sum": -11,
         "product": 30
       }
@@ -1295,6 +1652,13 @@
         "kind": "pair",
         "sum": -7,
         "product": -8
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_pair",
+        "alt": "1 + (-8) = -7, and (1) × (-8) = -8.",
+        "sum": -7,
+        "product": -8
       }
     },
     {
@@ -1322,7 +1686,18 @@
         "x -2 = 0 or x -3 = 0",
         "Both factors must be zero at the same time",
         "Divide by x and remove one factor"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x -2 = 0 OR x -3 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          -2,
+          1,
+          -3
+        ]
+      }
     },
     {
       "id": "zero-02",
@@ -1349,7 +1724,18 @@
         "x -1 + x -5 = 0",
         "Both factors must be zero at the same time",
         "Divide by x and remove one factor"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x -1 = 0 OR x -5 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          -1,
+          1,
+          -5
+        ]
+      }
     },
     {
       "id": "zero-03",
@@ -1376,7 +1762,18 @@
         "Both factors must be zero at the same time",
         "Divide by x and remove one factor",
         "x +2 = 0 or x -4 = 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x +2 = 0 OR x -4 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          2,
+          1,
+          -4
+        ]
+      }
     },
     {
       "id": "zero-04",
@@ -1403,7 +1800,18 @@
         "Both factors must be zero at the same time",
         "x -3 = 0 or x +1 = 0",
         "Divide by x and remove one factor"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x -3 = 0 OR x +1 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          -3,
+          1,
+          1
+        ]
+      }
     },
     {
       "id": "zero-05",
@@ -1430,7 +1838,18 @@
         "x -6 = 0 or x -2 = 0",
         "Both factors must be zero at the same time",
         "Divide by x and remove one factor"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x -6 = 0 OR x -2 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          -6,
+          1,
+          -2
+        ]
+      }
     },
     {
       "id": "zero-06",
@@ -1457,7 +1876,18 @@
         "x +3 + x +4 = 0",
         "Both factors must be zero at the same time",
         "Divide by x and remove one factor"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x +3 = 0 OR x +4 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          3,
+          1,
+          4
+        ]
+      }
     },
     {
       "id": "zero-07",
@@ -1484,7 +1914,18 @@
         "Both factors must be zero at the same time",
         "Divide by x and remove one factor",
         "x +0 = 0 or x -7 = 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x +0 = 0 OR x -7 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          0,
+          1,
+          -7
+        ]
+      }
     },
     {
       "id": "zero-08",
@@ -1511,7 +1952,18 @@
         "Both factors must be zero at the same time",
         "x -5 = 0 or x +6 = 0",
         "Divide by x and remove one factor"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "zero_product",
+        "alt": "Solve x -5 = 0 OR x +6 = 0. Either factor can make the product zero.",
+        "factors": [
+          1,
+          -5,
+          1,
+          6
+        ]
+      }
     },
     {
       "id": "linear-01",
@@ -1536,6 +1988,13 @@
       },
       "check": {
         "kind": "linear",
+        "a": 2,
+        "b": -3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "2x = 3, so x = 3/2.",
         "a": 2,
         "b": -3
       }
@@ -1565,6 +2024,13 @@
         "kind": "linear",
         "a": 1,
         "b": -4
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "1x = 4, so x = 4.",
+        "a": 1,
+        "b": -4
       }
     },
     {
@@ -1590,6 +2056,13 @@
       },
       "check": {
         "kind": "linear",
+        "a": 3,
+        "b": 6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "3x = -6, so x = -2.",
         "a": 3,
         "b": 6
       }
@@ -1619,6 +2092,13 @@
         "kind": "linear",
         "a": 4,
         "b": -2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "4x = 2, so x = 1/2.",
+        "a": 4,
+        "b": -2
       }
     },
     {
@@ -1644,6 +2124,13 @@
       },
       "check": {
         "kind": "linear",
+        "a": 2,
+        "b": 5
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "2x = -5, so x = -5/2.",
         "a": 2,
         "b": 5
       }
@@ -1673,6 +2160,13 @@
         "kind": "linear",
         "a": 5,
         "b": -10
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "5x = 10, so x = 2.",
+        "a": 5,
+        "b": -10
       }
     },
     {
@@ -1698,6 +2192,13 @@
       },
       "check": {
         "kind": "linear",
+        "a": 3,
+        "b": -1
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "3x = 1, so x = 1/3.",
         "a": 3,
         "b": -1
       }
@@ -1727,6 +2228,13 @@
         "kind": "linear",
         "a": 4,
         "b": 3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "linear_balance",
+        "alt": "4x = -3, so x = -3/4.",
+        "a": 4,
+        "b": 3
       }
     },
     {
@@ -1750,6 +2258,13 @@
       },
       "check": {
         "kind": "sqrtdivide",
+        "n": 16,
+        "d": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√16 = 4; divide by 2 to get 2.",
         "n": 16,
         "d": 2
       }
@@ -1777,6 +2292,13 @@
         "kind": "sqrtdivide",
         "n": 36,
         "d": 3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√36 = 6; divide by 3 to get 2.",
+        "n": 36,
+        "d": 3
       }
     },
     {
@@ -1800,6 +2322,13 @@
       },
       "check": {
         "kind": "sqrtdivide",
+        "n": 64,
+        "d": 4
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√64 = 8; divide by 4 to get 2.",
         "n": 64,
         "d": 4
       }
@@ -1827,6 +2356,13 @@
         "kind": "sqrtdivide",
         "n": 100,
         "d": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√100 = 10; divide by 2 to get 5.",
+        "n": 100,
+        "d": 2
       }
     },
     {
@@ -1850,6 +2386,13 @@
       },
       "check": {
         "kind": "sqrtdivide",
+        "n": 81,
+        "d": 3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√81 = 9; divide by 3 to get 3.",
         "n": 81,
         "d": 3
       }
@@ -1877,6 +2420,13 @@
         "kind": "sqrtdivide",
         "n": 49,
         "d": 7
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√49 = 7; divide by 7 to get 1.",
+        "n": 49,
+        "d": 7
       }
     },
     {
@@ -1900,6 +2450,13 @@
       },
       "check": {
         "kind": "sqrtdivide",
+        "n": 144,
+        "d": 4
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√144 = 12; divide by 4 to get 3.",
         "n": 144,
         "d": 4
       }
@@ -1927,6 +2484,13 @@
         "kind": "sqrtdivide",
         "n": 25,
         "d": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "square_root",
+        "alt": "√25 = 5; divide by 2 to get 5/2.",
+        "n": 25,
+        "d": 2
       }
     },
     {
@@ -1952,7 +2516,19 @@
       "choices": [
         "No, it is not quadratic",
         "Yes, it is quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "It is already in standard form, with a = 1.",
+        "original": "x^2+3x+2=0",
+        "terms": [
+          2,
+          3,
+          1,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-02",
@@ -1977,7 +2553,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "The missing x term has b = 0; a = 2.",
+        "original": "2x^2-7=0",
+        "terms": [
+          -7,
+          0,
+          2,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-03",
@@ -2002,7 +2590,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "The highest power is 1.",
+        "original": "3x+4=0",
+        "terms": [
+          4,
+          3,
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-04",
@@ -2027,7 +2627,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "Reorder it as −x² + 7 = 0; a = −1.",
+        "original": "7-x^2=0",
+        "terms": [
+          7,
+          0,
+          -1,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-05",
@@ -2052,7 +2664,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "Its highest power is 3.",
+        "original": "x^3+x=0",
+        "terms": [
+          0,
+          1,
+          0,
+          1
+        ]
+      }
     },
     {
       "id": "recognise-06",
@@ -2077,7 +2701,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "Expansion gives x² + 2x + 1 = 2x − 6, so x² + 7 = 0.",
+        "original": "(x+1)^2=2(x-3)",
+        "terms": [
+          7,
+          0,
+          1,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-07",
@@ -2102,7 +2738,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "Subtracting the right side gives 7x − 3 = 0.",
+        "original": "x^2+3x+1=(x-2)^2",
+        "terms": [
+          -3,
+          7,
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-08",
@@ -2127,7 +2775,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "This becomes x² + 2x − 8 = 0.",
+        "original": "x(x+2)=8",
+        "terms": [
+          -8,
+          2,
+          1,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-09",
@@ -2152,7 +2812,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "The x² terms cancel; the equation becomes −3x + 1 = 0.",
+        "original": "(x-2)(x+1)=(x-1)(x+3)",
+        "terms": [
+          1,
+          -3,
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-10",
@@ -2177,7 +2849,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "Collecting terms gives x² − 4 = 0.",
+        "original": "2x^2+1=x^2+5",
+        "terms": [
+          -4,
+          0,
+          1,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-11",
@@ -2202,7 +2886,19 @@
       "choices": [
         "No, it is not quadratic",
         "Yes, it is quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "The x³ terms cancel, leaving 6x² + 12x + 12 = 0.",
+        "original": "(x+2)^3=x^3-4",
+        "terms": [
+          12,
+          12,
+          6,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-12",
@@ -2227,7 +2923,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "Subtracting the right side gives 2x² − 13x + 9 = 0.",
+        "original": "x^3-4x^2-x+1=(x-2)^3",
+        "terms": [
+          9,
+          -13,
+          2,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-13",
@@ -2252,7 +2960,19 @@
       "choices": [
         "No, it is not quadratic",
         "Yes, it is quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "After expansion and collection: x² − 11x + 8 = 0.",
+        "original": "(2x-1)(x-3)=(x+5)(x-1)",
+        "terms": [
+          8,
+          -11,
+          1,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-14",
@@ -2277,7 +2997,19 @@
       "choices": [
         "No, it is not quadratic",
         "Yes, it is quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "The x² terms cancel, leaving x + 12 = 0.",
+        "original": "x(x+1)+8=(x+2)(x-2)",
+        "terms": [
+          12,
+          1,
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "recognise-15",
@@ -2302,7 +3034,19 @@
       "choices": [
         "Yes, it is quadratic",
         "No, it is not quadratic"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "polynomial_terms",
+        "alt": "After collecting terms, the x³ coefficient is −1; the equation is cubic.",
+        "original": "(x+2)^3=2x(x^2-1)",
+        "terms": [
+          8,
+          14,
+          6,
+          -1
+        ]
+      }
     },
     {
       "id": "verify-01",
@@ -2333,7 +3077,17 @@
       "choices": [
         "Yes, the left side becomes 0",
         "No, the left side is not 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-5)x + (6). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "mode": "substitution",
+        "x": 2
+      }
     },
     {
       "id": "verify-02",
@@ -2364,7 +3118,17 @@
       "choices": [
         "Yes, the left side becomes 0",
         "No, the left side is not 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-5)x + (6). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "mode": "substitution",
+        "x": 1
+      }
     },
     {
       "id": "verify-03",
@@ -2395,7 +3159,17 @@
       "choices": [
         "Yes, the left side becomes 0",
         "No, the left side is not 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (0)x + (-9). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": 0,
+        "c": -9,
+        "mode": "substitution",
+        "x": 3
+      }
     },
     {
       "id": "verify-04",
@@ -2426,7 +3200,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (2)x + (-8). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": 2,
+        "c": -8,
+        "mode": "substitution",
+        "x": -4
+      }
     },
     {
       "id": "verify-05",
@@ -2457,7 +3241,17 @@
       "choices": [
         "Yes, the left side becomes 0",
         "No, the left side is not 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-4)x + (4). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -4,
+        "c": 4,
+        "mode": "substitution",
+        "x": 2
+      }
     },
     {
       "id": "verify-06",
@@ -2488,7 +3282,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (-3)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": -3,
+        "c": 1,
+        "mode": "substitution",
+        "x": 1
+      }
     },
     {
       "id": "verify-07",
@@ -2519,7 +3323,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (1)x + (-6). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": 1,
+        "c": -6,
+        "mode": "substitution",
+        "x": 2
+      }
     },
     {
       "id": "verify-08",
@@ -2550,7 +3364,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (-5)x + (3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": -5,
+        "c": 3,
+        "mode": "substitution",
+        "x": 1.5
+      }
     },
     {
       "id": "verify-09",
@@ -2581,7 +3405,17 @@
       "choices": [
         "Yes, the left side becomes 0",
         "No, the left side is not 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 3x² + (-3)x + (-6). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 3,
+        "b": -3,
+        "c": -6,
+        "mode": "substitution",
+        "x": -1
+      }
     },
     {
       "id": "verify-10",
@@ -2612,7 +3446,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (-1)x + (-3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": -1,
+        "c": -3,
+        "mode": "substitution",
+        "x": -1
+      }
     },
     {
       "id": "verify-11",
@@ -2643,7 +3487,17 @@
       "choices": [
         "Yes, the left side becomes 0",
         "No, the left side is not 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 4x² + (4)x + (-3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 4,
+        "b": 4,
+        "c": -3,
+        "mode": "substitution",
+        "x": 0.5
+      }
     },
     {
       "id": "verify-12",
@@ -2674,7 +3528,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 4x² + (-4)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 4,
+        "b": -4,
+        "c": 1,
+        "mode": "substitution",
+        "x": 0.5
+      }
     },
     {
       "id": "verify-13",
@@ -2705,7 +3569,17 @@
       "choices": [
         "Yes, the left side becomes 0",
         "No, the left side is not 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 6x² + (-1)x + (-2). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 6,
+        "b": -1,
+        "c": -2,
+        "mode": "substitution",
+        "x": -0.5
+      }
     },
     {
       "id": "verify-14",
@@ -2736,7 +3610,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 8x² + (2)x + (-3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 8,
+        "b": 2,
+        "c": -3,
+        "mode": "substitution",
+        "x": 0.5
+      }
     },
     {
       "id": "verify-15",
@@ -2767,7 +3651,17 @@
       "choices": [
         "No, the left side is not 0",
         "Yes, the left side becomes 0"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 3x² + (-5)x + (2). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 3,
+        "b": -5,
+        "c": 2,
+        "mode": "substitution",
+        "x": 2
+      }
     },
     {
       "id": "factor-01",
@@ -2796,6 +3690,17 @@
         "a": 1,
         "b": -5,
         "c": 6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x − 3)(x − 2) = 0. Set each factor equal to zero to get x = 3 or x = 2. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          -2.0,
+          1,
+          -3
+        ]
       }
     },
     {
@@ -2825,6 +3730,17 @@
         "a": 1,
         "b": -3,
         "c": -10
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x − 5)(x + 2) = 0. Set each factor equal to zero to get x = 5 or x = -2. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          2.0,
+          1,
+          -5
+        ]
       }
     },
     {
@@ -2854,6 +3770,17 @@
         "a": 1,
         "b": 1,
         "c": -6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x − 2)(x + 3) = 0. Set each factor equal to zero to get x = 2 or x = -3. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          3.0,
+          1,
+          -2
+        ]
       }
     },
     {
@@ -2883,6 +3810,17 @@
         "a": 1,
         "b": -7,
         "c": 12
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x − 4)(x − 3) = 0. Set each factor equal to zero to get x = 4 or x = 3. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          -3.0,
+          1,
+          -4
+        ]
       }
     },
     {
@@ -2912,6 +3850,17 @@
         "a": 1,
         "b": 5,
         "c": 6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x + 2)(x + 3) = 0. Set each factor equal to zero to get x = -2 or x = -3. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          3.0,
+          1,
+          2
+        ]
       }
     },
     {
@@ -2941,6 +3890,17 @@
         "a": 1,
         "b": 0,
         "c": -16
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x − 4)(x + 4) = 0. Set each factor equal to zero to get x = 4 or x = -4. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          4.0,
+          1,
+          -4
+        ]
       }
     },
     {
@@ -2970,6 +3930,17 @@
         "a": 2,
         "b": 1,
         "c": -6
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(2x − 3)(x + 2) = 0. Set each factor equal to zero to get x = 3/2 or x = -2. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          2.0,
+          2,
+          -3
+        ]
       }
     },
     {
@@ -2999,6 +3970,17 @@
         "a": 2,
         "b": -5,
         "c": 3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(2x − 3)(x − 1) = 0. Set each factor equal to zero to get x = 3/2 or x = 1. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          -1.0,
+          2,
+          -3
+        ]
       }
     },
     {
@@ -3028,6 +4010,17 @@
         "a": 3,
         "b": -7,
         "c": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x − 2)(3x − 1) = 0. Set each factor equal to zero to get x = 2 or x = 1/3. Either value makes the original equation true.",
+        "factors": [
+          3.0,
+          -1.0,
+          1,
+          -2
+        ]
       }
     },
     {
@@ -3057,6 +4050,17 @@
         "a": 2,
         "b": 5,
         "c": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(2x + 1)(x + 2) = 0. Set each factor equal to zero to get x = -1/2 or x = -2. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          2.0,
+          2,
+          1
+        ]
       }
     },
     {
@@ -3086,6 +4090,17 @@
         "a": 3,
         "b": 2,
         "c": -1
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(3x − 1)(x + 1) = 0. Set each factor equal to zero to get x = 1/3 or x = -1. Either value makes the original equation true.",
+        "factors": [
+          1.0,
+          1.0,
+          3,
+          -1
+        ]
       }
     },
     {
@@ -3115,6 +4130,17 @@
         "a": 2,
         "b": -3,
         "c": -2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(x − 2)(2x + 1) = 0. Set each factor equal to zero to get x = 2 or x = -1/2. Either value makes the original equation true.",
+        "factors": [
+          2.0,
+          1.0,
+          1,
+          -2
+        ]
       }
     },
     {
@@ -3145,6 +4171,17 @@
         "a": 6,
         "b": -1,
         "c": -2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(3x − 2)(2x + 1) = 0. Set each factor equal to zero to get x = 2/3 or x = -1/2. Either value makes the original equation true.",
+        "factors": [
+          2.0,
+          1.0,
+          3,
+          -2
+        ]
       }
     },
     {
@@ -3174,6 +4211,17 @@
         "a": 6,
         "b": 7,
         "c": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(2x + 1)(3x + 2) = 0. Set each factor equal to zero to get x = -1/2 or x = -2/3. Either value makes the original equation true.",
+        "factors": [
+          3.0,
+          2.0,
+          2,
+          1
+        ]
       }
     },
     {
@@ -3203,6 +4251,17 @@
         "a": 4,
         "b": 0,
         "c": -9
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(2x − 3)(2x + 3) = 0. Set each factor equal to zero to get x = 3/2 or x = -3/2. Either value makes the original equation true.",
+        "factors": [
+          2.0,
+          3.0,
+          2,
+          -3
+        ]
       }
     },
     {
@@ -3232,6 +4291,17 @@
         "a": 9,
         "b": -6,
         "c": 1
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(3x − 1)(3x − 1) = 0. Set each factor equal to zero to get x = 1/3 or x = 1/3. Both factors give the same root.",
+        "factors": [
+          3.0,
+          -1.0,
+          3,
+          -1
+        ]
       }
     },
     {
@@ -3261,6 +4331,17 @@
         "a": 8,
         "b": 2,
         "c": -3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(2x − 1)(4x + 3) = 0. Set each factor equal to zero to get x = 1/2 or x = -3/4. Either value makes the original equation true.",
+        "factors": [
+          4.0,
+          3.0,
+          2,
+          -1
+        ]
       }
     },
     {
@@ -3290,6 +4371,17 @@
         "a": 6,
         "b": -7,
         "c": 2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "factor_grid",
+        "alt": "(3x − 2)(2x − 1) = 0. Set each factor equal to zero to get x = 2/3 or x = 1/2. Either value makes the original equation true.",
+        "factors": [
+          2.0,
+          -1.0,
+          3,
+          -2
+        ]
       }
     },
     {
@@ -3319,6 +4411,15 @@
         "a": 1,
         "b": -4,
         "c": 3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = 4. The roots are 3 and 1.",
+        "a": 1,
+        "b": -4,
+        "c": 3,
+        "mode": "roots"
       }
     },
     {
@@ -3348,6 +4449,15 @@
         "a": 1,
         "b": -5,
         "c": 4
+      },
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = 9. The roots are 4 and 1.",
+        "a": 1,
+        "b": -5,
+        "c": 4,
+        "mode": "roots"
       }
     },
     {
@@ -3377,6 +4487,15 @@
         "a": 1,
         "b": 1,
         "c": -2
+      },
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = 9. The roots are 1 and -2.",
+        "a": 1,
+        "b": 1,
+        "c": -2,
+        "mode": "roots"
       }
     },
     {
@@ -3406,6 +4525,15 @@
         "a": 1,
         "b": -6,
         "c": 5
+      },
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = 16. The roots are 5 and 1.",
+        "a": 1,
+        "b": -6,
+        "c": 5,
+        "mode": "roots"
       }
     },
     {
@@ -3435,6 +4563,15 @@
         "a": 1,
         "b": -2,
         "c": -3
+      },
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = 16. The roots are 3 and -1.",
+        "a": 1,
+        "b": -2,
+        "c": -3,
+        "mode": "roots"
       }
     },
     {
@@ -3464,6 +4601,15 @@
         "a": 1,
         "b": 0,
         "c": -25
+      },
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = 100. The roots are 5 and -5.",
+        "a": 1,
+        "b": 0,
+        "c": -25,
+        "mode": "roots"
       }
     },
     {
@@ -3496,7 +4642,16 @@
         "$x=6\\pm\\sqrt{12}$",
         "There are no real roots",
         "$x=\\frac{6\\pm\\sqrt{12}}{4}$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 2, b = -6, c = 3, D = 12. Substitute into the formula, using both signs.",
+        "a": 2,
+        "b": -6,
+        "c": 3,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-08",
@@ -3528,7 +4683,16 @@
         "$x=4\\pm\\sqrt{8}$",
         "$x=\\frac{4\\pm\\sqrt{8}}{2}$",
         "There are no real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 1, b = -4, c = 2, D = 8. Substitute into the formula, using both signs.",
+        "a": 1,
+        "b": -4,
+        "c": 2,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-09",
@@ -3560,7 +4724,16 @@
         "$x=\\frac{-2\\pm\\sqrt{8}}{2}$",
         "$x=-2\\pm\\sqrt{8}$",
         "There are no real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 1, b = 2, c = -1, D = 8. Substitute into the formula, using both signs.",
+        "a": 1,
+        "b": 2,
+        "c": -1,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-10",
@@ -3592,7 +4765,16 @@
         "$x=\\frac{2\\pm\\sqrt{12}}{4}$",
         "$x=-2\\pm\\sqrt{12}$",
         "There are no real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 2, b = 2, c = -1, D = 12. Substitute into the formula, using both signs.",
+        "a": 2,
+        "b": 2,
+        "c": -1,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-11",
@@ -3624,7 +4806,16 @@
         "$x=6\\pm\\sqrt{24}$",
         "There are no real roots",
         "$x=\\frac{6\\pm\\sqrt{24}}{6}$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 3, b = -6, c = 1, D = 24. Substitute into the formula, using both signs.",
+        "a": 3,
+        "b": -6,
+        "c": 1,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-12",
@@ -3656,7 +4847,16 @@
         "$x=2\\pm\\sqrt{8}$",
         "$x=\\frac{2\\pm\\sqrt{8}}{2}$",
         "There are no real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 1, b = -2, c = -1, D = 8. Substitute into the formula, using both signs.",
+        "a": 1,
+        "b": -2,
+        "c": -1,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-13",
@@ -3685,6 +4885,15 @@
         "a": 3,
         "b": -2,
         "c": 0.3333333333333333
+      },
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = 0. The roots are 1/3 and 1/3.",
+        "a": 3,
+        "b": -2,
+        "c": 0.3333333333333333,
+        "mode": "roots"
       }
     },
     {
@@ -3717,7 +4926,16 @@
         "The only root is 0",
         "There are two distinct real roots",
         "There is one repeated real root"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = -15 < 0, so there are no real roots.",
+        "a": 2,
+        "b": 1,
+        "c": 2,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-15",
@@ -3749,7 +4967,16 @@
         "$x=-2\\pm\\sqrt{28}$",
         "There are no real roots",
         "$x=\\frac{-2\\pm\\sqrt{28}}{6}$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 3, b = 2, c = -2, D = 28. Substitute into the formula, using both signs.",
+        "a": 3,
+        "b": 2,
+        "c": -2,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-16",
@@ -3781,7 +5008,16 @@
         "$x=2\\pm\\sqrt{28}$",
         "$x=\\frac{2\\pm\\sqrt{28}}{4}$",
         "There are no real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 2, b = -2, c = -3, D = 28. Substitute into the formula, using both signs.",
+        "a": 2,
+        "b": -2,
+        "c": -3,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-17",
@@ -3813,7 +5049,16 @@
         "$x=\\frac{-4\\pm\\sqrt{32}}{8}$",
         "$x=-4\\pm\\sqrt{32}$",
         "There are no real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "a = 4, b = 4, c = -1, D = 32. Substitute into the formula, using both signs.",
+        "a": 4,
+        "b": 4,
+        "c": -1,
+        "mode": "roots"
+      }
     },
     {
       "id": "formula-18",
@@ -3845,7 +5090,16 @@
         "The only root is 0",
         "There are two distinct real roots",
         "There is one repeated real root"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "formula_steps",
+        "alt": "D = -23 < 0, so there are no real roots.",
+        "a": 2,
+        "b": 3,
+        "c": 4,
+        "mode": "roots"
+      }
     },
     {
       "id": "discriminant-01",
@@ -3876,7 +5130,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-5)x + (6). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -5,
+        "c": 6,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-02",
@@ -3907,7 +5171,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (2)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": 2,
+        "c": 1,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-03",
@@ -3938,7 +5212,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (0)x + (4). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": 0,
+        "c": 4,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-04",
@@ -3969,7 +5253,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (0)x + (-4). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": 0,
+        "c": -4,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-05",
@@ -4000,7 +5294,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 1x² + (-6)x + (9). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 1,
+        "b": -6,
+        "c": 9,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-06",
@@ -4031,7 +5335,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (-4)x + (3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": -4,
+        "c": 3,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-07",
@@ -4062,7 +5376,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (-6)x + (3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": -6,
+        "c": 3,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-08",
@@ -4093,7 +5417,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 3x² + (6)x + (3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 3,
+        "b": 6,
+        "c": 3,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-09",
@@ -4124,7 +5458,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (3)x + (5). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": 3,
+        "c": 5,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-10",
@@ -4155,7 +5499,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 3x² + (1)x + (-2). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 3,
+        "b": 1,
+        "c": -2,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-11",
@@ -4186,7 +5540,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 3x² + (-2)x + (0.3333333333333333). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 3,
+        "b": -2,
+        "c": 0.3333333333333333,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-12",
@@ -4217,7 +5581,17 @@
         "Two distinct real roots",
         "No real roots",
         "One repeated real root"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 4x² + (-4)x + (1). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 4,
+        "b": -4,
+        "c": 1,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-13",
@@ -4248,7 +5622,17 @@
         "Two distinct real roots",
         "One repeated real root",
         "No real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 6x² + (7)x + (2). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 6,
+        "b": 7,
+        "c": 2,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-14",
@@ -4279,7 +5663,17 @@
         "Two distinct real roots",
         "No real roots",
         "One repeated real root"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 5x² + (2)x + (3). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 5,
+        "b": 2,
+        "c": 3,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "discriminant-15",
@@ -4310,7 +5704,17 @@
         "One repeated real root",
         "No real roots",
         "Two distinct real roots"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "quadratic_plot",
+        "alt": "Graph of y = 2x² + (0)x + (-0.5). A real root is an x-value where the graph meets the horizontal axis.",
+        "a": 2,
+        "b": 0,
+        "c": -0.5,
+        "mode": "discriminant",
+        "x": 0
+      }
     },
     {
       "id": "model-01",
@@ -4337,7 +5741,15 @@
         "$x+(x+2)=15$",
         "$x^2+2=15$",
         "$2x+2(x+2)=15$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "Length = x + 2. Therefore x(x + 2) = 15.",
+        "k": 1,
+        "extra": 2,
+        "area": 15
+      }
     },
     {
       "id": "model-02",
@@ -4364,7 +5776,15 @@
         "$x^2+3=28$",
         "$2x+2(x+3)=28$",
         "$x(x+3)=28$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "Length = x + 3. Therefore x(x + 3) = 28.",
+        "k": 1,
+        "extra": 3,
+        "area": 28
+      }
     },
     {
       "id": "model-03",
@@ -4391,7 +5811,15 @@
         "$x^2+1=30$",
         "$x(x+1)=30$",
         "$2x+2(x+1)=30$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "Length = x + 1. Therefore x(x + 1) = 30.",
+        "k": 1,
+        "extra": 1,
+        "area": 30
+      }
     },
     {
       "id": "model-04",
@@ -4418,7 +5846,15 @@
         "$x(x+2)=48$",
         "$x^2+2=48$",
         "$2x+2(x+2)=48$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "Length = x + 2. Therefore x(x + 2) = 48.",
+        "k": 1,
+        "extra": 2,
+        "area": 48
+      }
     },
     {
       "id": "model-05",
@@ -4445,7 +5881,15 @@
         "$x+(x+4)=77$",
         "$x^2+4=77$",
         "$2x+2(x+4)=77$"
-      ]
+      ],
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "Length = x + 4. Therefore x(x + 4) = 77.",
+        "k": 1,
+        "extra": 4,
+        "area": 77
+      }
     },
     {
       "id": "model-06",
@@ -4469,6 +5913,14 @@
       "check": {
         "kind": "rectangle",
         "w": 4,
+        "extra": 2,
+        "area": 24
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The roots are 4 and -6. A width must be positive, so it is 4 m. Its length is 6 m.",
+        "k": 1,
         "extra": 2,
         "area": 24
       }
@@ -4497,6 +5949,14 @@
         "w": 5,
         "extra": 3,
         "area": 40
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The roots are 5 and -8. A width must be positive, so it is 5 m. Its length is 8 m.",
+        "k": 1,
+        "extra": 3,
+        "area": 40
       }
     },
     {
@@ -4521,6 +5981,14 @@
       "check": {
         "kind": "rectangle",
         "w": 6,
+        "extra": 1,
+        "area": 42
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The roots are 6 and -7. A width must be positive, so it is 6 m. Its length is 7 m.",
+        "k": 1,
         "extra": 1,
         "area": 42
       }
@@ -4549,6 +6017,14 @@
         "w": 7,
         "extra": 2,
         "area": 63
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The roots are 7 and -9. A width must be positive, so it is 7 m. Its length is 9 m.",
+        "k": 1,
+        "extra": 2,
+        "area": 63
       }
     },
     {
@@ -4575,6 +6051,14 @@
         "w": 8,
         "extra": 3,
         "area": 88
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The roots are 8 and -11. A width must be positive, so it is 8 m. Its length is 11 m.",
+        "k": 1,
+        "extra": 3,
+        "area": 88
       }
     },
     {
@@ -4599,6 +6083,14 @@
       "check": {
         "kind": "rectangle",
         "w": 9,
+        "extra": 1,
+        "area": 90
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The roots are 9 and -10. A width must be positive, so it is 9 m. Its length is 10 m.",
+        "k": 1,
         "extra": 1,
         "area": 90
       }
@@ -4629,6 +6121,14 @@
         "k": 2,
         "extra": 1,
         "area": 300
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The positive width is 12 m. The length is 2 × 12 + 1 = 25 m.",
+        "k": 2,
+        "extra": 1,
+        "area": 300
       }
     },
     {
@@ -4653,6 +6153,14 @@
       "check": {
         "kind": "hall",
         "w": 8,
+        "k": 2,
+        "extra": 2,
+        "area": 144
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The positive width is 8 m. The length is 2 × 8 + 2 = 18 m.",
         "k": 2,
         "extra": 2,
         "area": 144
@@ -4683,6 +6191,14 @@
         "k": 3,
         "extra": 1,
         "area": 80
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The positive width is 5 m. The length is 3 × 5 + 1 = 16 m.",
+        "k": 3,
+        "extra": 1,
+        "area": 80
       }
     },
     {
@@ -4707,6 +6223,14 @@
       "check": {
         "kind": "hall",
         "w": 6,
+        "k": 2,
+        "extra": 3,
+        "area": 90
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The positive width is 6 m. The length is 2 × 6 + 3 = 15 m.",
         "k": 2,
         "extra": 3,
         "area": 90
@@ -4737,6 +6261,14 @@
         "k": 3,
         "extra": 2,
         "area": 161
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The positive width is 7 m. The length is 3 × 7 + 2 = 23 m.",
+        "k": 3,
+        "extra": 2,
+        "area": 161
       }
     },
     {
@@ -4764,7 +6296,18 @@
         "k": 2,
         "extra": 1,
         "area": 171
+      },
+      "visual": {
+        "version": 1,
+        "kind": "rectangle_area",
+        "alt": "The positive width is 9 m. The length is 2 × 9 + 1 = 19 m.",
+        "k": 2,
+        "extra": 1,
+        "area": 171
       }
     }
+  ],
+  "compatibleVersions": [
+    "2026-09-05.1"
   ]
 }
