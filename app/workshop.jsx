@@ -660,26 +660,10 @@ export default function Workshop() {
             )}
             {isLesson ? (
               <>
-                <p className="lesson-explanation">{a.lesson.explanation}</p>
                 <LearningVisual
                   key={`${a.skill}-${a.stage}`}
                   spec={a.lesson.visual}
                 />
-                <div className="example-board">
-                  <span className="board-label">WORKED EXAMPLE</span>
-                  <MathText value={a.lesson.example} block />
-                </div>
-                <details className="worked-steps">
-                  <summary>Read the worked steps</summary>
-                  <ol className="explanation-steps">
-                    {a.lesson.steps.map((step, i) => (
-                      <li key={i}>
-                        <span>{i + 1}</span>
-                        <p>{step}</p>
-                      </li>
-                    ))}
-                  </ol>
-                </details>
                 <div className="action-tray">
                   <Primary disabled={busy} onClick={() => send('continue')}>
                     {busy

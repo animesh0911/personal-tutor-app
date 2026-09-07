@@ -104,3 +104,25 @@ test('question-specific visual is withheld until assistance or feedback', () => 
   assert(validateVisual(engine.view(s).active.question.visual));
   assert.equal(s.xp, before);
 });
+
+test('every supported visual has a bounded guided story with renderable mathematics', async () => {
+  const { visualStory } = await import('../lib/visual-story.js');
+  const { default: katex } = await import('katex');
+  for (const spec of [
+    ...pack.skills.map((s) => s.lesson.visual),
+    ...pack.questions.map((q) => q.visual),
+  ]) {
+    const story = visualStory(spec);
+    assert(story.length >= 3 && story.length <= 8);
+    for (const step of story) {
+      assert(step.title && step.body);
+      for (const math of [
+        ...step.tiles.map((t) => t.math),
+        step.equation,
+      ].filter(Boolean)) {
+        assert(!/NaN|undefined|Infinity/.test(math));
+        katex.renderToString(math, { throwOnError: true, trust: false });
+      }
+    }
+  }
+});

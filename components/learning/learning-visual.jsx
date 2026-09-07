@@ -3,6 +3,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { visualStory } from '@/lib/visual-story';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { MathText } from './math-text';
@@ -49,7 +50,7 @@ function Range({ label, value, min, max, step = 1, onChange }) {
     </div>
   );
 }
-function Plot({ a, b, c, x }) {
+function Plot({ a, b, c, x, revealRoots = true, showCurve = true }) {
   const host = useRef(null);
   const [failed, setFailed] = useState(false);
   useEffect(() => {
@@ -78,20 +79,22 @@ function Plot({ a, b, c, x }) {
           resize: { enabled: true },
           renderer: 'svg',
         });
-        board.create('functiongraph', [(t) => valueAt(a, b, c, t)], {
-          strokeColor: '#4F46E5',
-          strokeWidth: 3,
-        });
-        quadratic(a, b, c).roots.forEach((root) =>
-          board.create('point', [root, 0], {
-            name: `root ${fmt(root)}`,
-            fixed: true,
-            size: 4,
-            strokeColor: '#047857',
-            fillColor: '#047857',
-            label: { offset: [5, 15] },
-          }),
-        );
+        if (showCurve)
+          board.create('functiongraph', [(t) => valueAt(a, b, c, t)], {
+            strokeColor: '#4F46E5',
+            strokeWidth: 3,
+          });
+        if (revealRoots)
+          quadratic(a, b, c).roots.forEach((root) =>
+            board.create('point', [root, 0], {
+              name: `root ${fmt(root)}`,
+              fixed: true,
+              size: 4,
+              strokeColor: '#047857',
+              fillColor: '#047857',
+              label: { offset: [5, 15] },
+            }),
+          );
         board.create('point', [x, y], {
           name: 'P',
           fixed: true,
@@ -107,7 +110,7 @@ function Plot({ a, b, c, x }) {
       disposed = true;
       if (board) api.JSXGraph.freeBoard(board);
     };
-  }, [a, b, c, x]);
+  }, [a, b, c, x, revealRoots, showCurve]);
   return (
     <>
       {failed && (
@@ -578,20 +581,186 @@ const renderers = {
   formula_steps: Formula,
   rectangle_area: Rectangle,
 };
+function StoryPicture({ s, index }) {
+  if (
+    (s.kind === 'factor_grid' || s.kind === 'zero_product') &&
+    index >= 1 &&
+    index <= 5
+  ) {
+    const [p, q, r, t] = s.factors;
+    const values = [
+      `${texNum(p * r)}x^2`,
+      `${texNum(p * t)}x`,
+      `${texNum(q * r)}x`,
+      texNum(q * t),
+    ];
+    return (
+      <div
+        className="story-product-grid"
+        role="group"
+        aria-label="Four multiplication boxes, revealed one at a time"
+      >
+        {values.map((v, i) => (
+          <div key={i} className={index === i + 1 ? 'current-product' : ''}>
+            <span>{i + 1}</span>
+            {i < index ? (
+              <M>{v}</M>
+            ) : (
+              <span className="pending-product">Next</span>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (s.kind === 'rectangle_area')
+    return (
+      <svg
+        className="story-picture"
+        viewBox="0 0 340 170"
+        role="img"
+        aria-label={
+          index === 0
+            ? 'Rectangle with unknown width x'
+            : 'Rectangle with width x and a length built from x'
+        }
+      >
+        <rect
+          x="35"
+          y="35"
+          width="250"
+          height="100"
+          fill="#E0E7FF"
+          stroke="#4F46E5"
+          strokeWidth="3"
+        />
+        <text x="160" y="22" textAnchor="middle">
+          {index > 0 ? `length = ${s.k} × x + ${s.extra}` : 'length: ?'}
+        </text>
+        <text x="12" y="90">
+          x
+        </text>
+        {index > 1 && (
+          <>
+            <path
+              d="M85 35V135 M135 35V135 M185 35V135 M235 35V135 M35 85H285"
+              stroke="#A5B4FC"
+            />
+            <rect x="95" y="66" width="135" height="35" fill="#FFFDF8" />
+            <text x="160" y="89" textAnchor="middle">
+              area = {s.area}
+            </text>
+          </>
+        )}
+      </svg>
+    );
+  if (s.kind === 'signed_square' || s.kind === 'square_root') {
+    const side = s.kind === 'square_root' ? Math.sqrt(s.n) : Math.abs(s.n);
+    return (
+      <svg
+        className="story-picture"
+        viewBox="0 0 200 175"
+        role="img"
+        aria-label={`${side} rows of ${side} squares. ${index === 0 ? 'One row is highlighted.' : side * side + ' squares in total.'}`}
+      >
+        {Array.from({ length: side * side }, (_, i) => (
+          <rect
+            key={i}
+            x={30 + ((i % side) * 130) / Math.max(1, side)}
+            y={20 + (Math.floor(i / side) * 130) / Math.max(1, side)}
+            width={130 / Math.max(1, side) - 2}
+            height={130 / Math.max(1, side) - 2}
+            fill={index === 0 && i >= side ? '#E5E7EB' : '#818CF8'}
+          />
+        ))}
+        <text x="95" y="170" textAnchor="middle">
+          {index === 0
+            ? `${side} in each row`
+            : `${side * side} little squares`}
+        </text>
+      </svg>
+    );
+  }
+  if (s.kind === 'quadratic_plot' && index >= 1) {
+    const x = s.x ?? 0;
+    return (
+      <Plot
+        a={s.a}
+        b={s.b}
+        c={s.c}
+        x={x}
+        revealRoots={index >= 3}
+        showCurve={index >= 2}
+      />
+    );
+  }
+  if (s.kind === 'formula_steps' && index === 3)
+    return <Plot a={s.a} b={s.b} c={s.c} x={-s.b / (2 * s.a)} />;
+  return null;
+}
 export function LearningVisual({ spec }) {
+  const [index, setIndex] = useState(0);
   if (!validateVisual(spec)) return null;
-  const Renderer = renderers[spec.kind];
+  const Renderer = renderers[spec.kind],
+    steps = visualStory(spec),
+    current = steps[index] ?? steps[0];
   return (
-    <figure className="learning-visual">
+    <figure className="learning-visual guided-story">
       <figcaption>
-        <span className="eyebrow">SEE IT · TRY IT</span>
-        <span>Explore freely — this isn’t a scored question.</span>
+        <span className="eyebrow">LET’S SEE WHY</span>
+        <span>
+          Step {index + 1} of {steps.length}
+        </span>
       </figcaption>
-      <Renderer s={spec} />
-      <details className="visual-description">
-        <summary>Read the original example description</summary>
-        <p>{spec.alt}</p>
-      </details>
+      <div className="story-dots" aria-hidden="true">
+        {steps.map((_, i) => (
+          <span key={i} className={i <= index ? 'reached' : ''} />
+        ))}
+      </div>
+      <div className="story-scene" aria-live="polite" aria-atomic="true">
+        <h2>{current.title}</h2>
+        <p className="story-caption">{current.body}</p>
+        <StoryPicture s={spec} index={index} />
+        <div className="story-tiles">
+          {current.tiles.map((t, i) => (
+            <div className="story-tile" key={i}>
+              <span>{t.label}</span>
+              <M>{t.math}</M>
+            </div>
+          ))}
+        </div>
+        {current.equation && (
+          <div className="story-equation">
+            <M>{current.equation}</M>
+          </div>
+        )}
+      </div>
+      <div className="story-navigation">
+        <Button
+          type="button"
+          variant="outline"
+          disabled={index === 0}
+          onClick={() => setIndex(index - 1)}
+        >
+          Back
+        </Button>
+        {index < steps.length - 1 ? (
+          <Button type="button" onClick={() => setIndex(index + 1)}>
+            Next: {steps[index + 1].title} →
+          </Button>
+        ) : (
+          <Button type="button" variant="outline" onClick={() => setIndex(0)}>
+            Watch it again ↺
+          </Button>
+        )}
+      </div>
+      {index === steps.length - 1 && (
+        <details className="visual-description">
+          <summary>Explore more — try changing the numbers</summary>
+          <Renderer s={spec} />
+        </details>
+      )}
     </figure>
   );
 }
