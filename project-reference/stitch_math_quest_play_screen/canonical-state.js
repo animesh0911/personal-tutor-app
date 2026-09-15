@@ -1,0 +1,18 @@
+window.CURIOUS_WORKSHOP_STATE = Object.freeze({
+  learnerName: "Maya",
+  classLevel: 6,
+  subject: "Mathematics",
+  mascotName: "Prism",
+  progressionLevel: 4,
+  xp: 340,
+  xpNextLevel: 500,
+  currentStreakDays: 7,
+  bestStreakDays: 12,
+  weeklyGoalCompleted: 3,
+  weeklyGoalTarget: 5,
+  dailyQuestProblemCount: 6,
+  dailyQuestMinutes: 10,
+  prototypeChapter: "Chapter 1",
+  prototypeSkill: "Equivalent Fractions",
+  allPublishedSkillsPlayable: true,
+});

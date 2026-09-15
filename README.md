@@ -1,5 +1,7 @@
 # Curious Workshop: quadratic equations prototype
 
+**The new Pi-powered tutor MVP is Prism.** See [studio/README.md](studio/README.md) for setup, architecture and verification. Run `npm run studio:build` followed by `npm run studio:start`, then open http://localhost:4310. The documentation below describes the original deterministic prototype retained alongside it.
+
 A working web prototype with custom email/password registration, server-backed progress, a source-aligned JSON chapter pack, and one deterministic adaptive learning loop. It uses the existing Curious Workshop design tokens. The browser interface is JavaScript/JSX and CSS, with a small Worker-compatible API and SQLite/D1 persistence.
 
 ## Scope in this build

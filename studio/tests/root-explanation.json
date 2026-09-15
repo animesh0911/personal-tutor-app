@@ -1,0 +1,5 @@
+{
+  "kind": "explanation",
+  "title": "Checking a root — the substitution test",
+  "body": "A **root** of $ax^2 + bx + c = 0$ is a value of $x$ that makes the left side equal to exactly **zero**.\n\nTo check, replace every $x$ with the candidate value, keeping brackets, then simplify.\n\n---\n\n**Example:** Is $x = 3$ a root of $x^2 - 5x + 6 = 0$?\n\n$$x^2 - 5x + 6 \\quad\\xrightarrow{x=3}\\quad (3)^2 - 5(3) + 6 = 9 - 15 + 6 = 0 \\checkmark$$\n\nYes — the result is 0, so $x = 3$ **is** a root.\n\n---\n\n**Example:** Is $x = 1$ a root of the same equation?\n\n$$(1)^2 - 5(1) + 6 = 1 - 5 + 6 = 2 \\neq 0$$\n\nNo — the result is 2, not 0, so $x = 1$ **is not** a root.\n\n---\n\n**Your turn:** Apply the same test to $x^2 - 5x + 4 = 0$, using $x = 1$ first, then $x = 4$. Write out each line of arithmetic."
+}

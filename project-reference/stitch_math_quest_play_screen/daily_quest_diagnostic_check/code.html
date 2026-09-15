@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Quest — Quick check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="../shared.css" rel="stylesheet">
+<link href="../quest.css" rel="stylesheet">
+<script defer src="../canonical-state.js"></script>
+<script defer src="../shared.js"></script>
+<script defer src="../quest.js"></script>
+</head>
+<body class="quest-screen">
+<header class="quest-header quest-shell">
+<a class="icon-button" href="../play_home_curious_workshop/code.html" aria-label="Exit quest"><span aria-hidden="true">×</span></a>
+<div class="quest-progress">
+<div class="quest-progress__label"><span>Problem 1 of 6</span><span>17%</span></div>
+<div class="quest-progress__track" role="progressbar" aria-label="Quest progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="17"><div class="quest-progress__value" style="width:17%"></div></div>
+</div>
+<button class="icon-button" type="button" aria-label="Read quick check aloud"><span class="sound-mark" aria-hidden="true"></span></button>
+</header>
+<main class="quest-main">
+<div class="topic-row"><span class="topic-pill">Quick check</span><span class="reward-pill">About 30 seconds</span></div>
+<section class="teaching-card">
+<div class="teaching-intro"><span class="prism-mini" data-prism="thinking" aria-hidden="true"></span><div><strong>Let me check one idea</strong><p>I’ll use your answer to choose the shortest explanation.</p></div></div>
+<h1 style="text-align:center">What fraction is shaded?</h1>
+<div class="fraction-disc fraction-disc--quarters" style="--fill:25%" role="img" aria-label="A circle split into four equal parts with one part shaded"></div>
+<p class="problem-card__hint" style="text-align:center">Count the shaded part, then count all equal parts.</p>
+</section>
+<p class="answer-label">Choose one answer</p>
+<div class="answer-grid" role="radiogroup" aria-label="Answer choices">
+<button class="answer-option" type="button" role="radio" aria-checked="false" aria-label="one half" data-correct="false"><span class="fraction" aria-hidden="true"><span>1</span><span class="fraction__bar"></span><span>2</span></span></button>
+<button class="answer-option" type="button" role="radio" aria-checked="false" aria-label="one third" data-correct="false"><span class="fraction" aria-hidden="true"><span>1</span><span class="fraction__bar"></span><span>3</span></span></button>
+<button class="answer-option" type="button" role="radio" aria-checked="false" aria-label="one fourth" data-correct="true"><span class="fraction" aria-hidden="true"><span>1</span><span class="fraction__bar"></span><span>4</span></span></button>
+<button class="answer-option" type="button" role="radio" aria-checked="false" aria-label="three fourths" data-correct="false"><span class="fraction" aria-hidden="true"><span>3</span><span class="fraction__bar"></span><span>4</span></span></button>
+</div>
+<p class="cw-sr-only" aria-live="polite" data-selection-status></p>
+</main>
+<footer class="quest-action-tray"><div class="quest-action-tray__inner">
+<button class="primary-action" type="button" disabled aria-disabled="true" data-check-answer data-correct-path="../repair_activity_2_4_equals_1_2_mobile/code.html" data-incorrect-path="../daily_quest_diagnostic_check/code.html">Check answer <span aria-hidden="true">→</span></button>
+</div></footer>
+</body></html>

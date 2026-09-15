@@ -1,0 +1,14 @@
+node_modules
+.git
+.env*
+.studio-data
+.studio-dist
+.wrangler
+.next
+.vinext
+dist
+outputs
+work
+studio/test-results
+studio/playwright-report
+*.log

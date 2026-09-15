@@ -1,0 +1,287 @@
+.boss-banner {
+  padding: 18px;
+  border: 2px solid #fdba74;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fff7ed, #ffedd5);
+  box-shadow: 0 5px 0 #fed7aa;
+}
+
+.boss-banner h1 {
+  margin: 8px 0 0;
+  font-size: clamp(26px, 7vw, 34px);
+}
+
+.boss-banner p {
+  margin: 7px 0 0;
+  color: #7c2d12;
+  line-height: 1.45;
+}
+
+.math-problem {
+  margin-top: 16px;
+  padding: 20px;
+  border: 2px solid var(--cw-border);
+  border-radius: 22px;
+  background: var(--cw-surface);
+  box-shadow: 0 4px 0 #e4dfd2;
+}
+
+.math-problem h2 {
+  margin: 0;
+  font-size: clamp(22px, 6vw, 28px);
+  line-height: 1.3;
+}
+
+.math-problem p {
+  margin: 8px 0 0;
+  color: var(--cw-text-secondary);
+  line-height: 1.5;
+}
+
+.fraction-strips {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.fraction-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.fraction-strip span {
+  height: 32px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.fraction-strip span.filled-a {
+  background: var(--cw-reward);
+  border-color: #c2410c;
+}
+
+.fraction-strip span.filled-b {
+  background: var(--cw-teaching);
+  border-color: #155e75;
+}
+
+.answer-entry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.answer-entry input {
+  width: 72px;
+  height: 56px;
+  border: 2px solid var(--cw-border);
+  border-radius: 13px;
+  background: #fff;
+  color: var(--cw-text);
+  font: 800 23px/1 "JetBrains Mono", ui-monospace, monospace;
+  text-align: center;
+}
+
+.camera-card {
+  padding: 20px;
+  border: 2px solid var(--cw-border);
+  border-radius: 22px;
+  background: var(--cw-surface);
+  box-shadow: 0 4px 0 #e4dfd2;
+}
+
+.camera-frame {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border: 3px dashed #a5b4fc;
+  border-radius: 20px;
+  background: #f5f3ff;
+  text-align: center;
+}
+
+.camera-frame strong,
+.camera-frame span {
+  display: block;
+}
+
+.camera-frame strong {
+  margin-top: 12px;
+  font-size: 21px;
+}
+
+.camera-frame span {
+  margin-top: 5px;
+  color: var(--cw-text-secondary);
+}
+
+.tip-list {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tip-list li {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: var(--cw-text-secondary);
+  line-height: 1.4;
+}
+
+.file-action {
+  position: relative;
+  overflow: hidden;
+}
+
+.file-action input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.work-preview {
+  padding: 18px;
+  border: 1.5px solid var(--cw-border);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 1px 1px, #dbeafe 1px, transparent 0) 0 0/18px 18px,
+    #fff;
+  font: 700 20px/1.7 "JetBrains Mono", ui-monospace, monospace;
+}
+
+.processing-status {
+  display: grid;
+  place-items: center;
+  min-height: 340px;
+  text-align: center;
+}
+
+.processing-mascot {
+  width: 112px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  border: 7px solid #c7d2fe;
+  border-radius: 28px;
+  background: #111827;
+  color: #a5f3fc;
+  box-shadow: 0 7px 0 var(--cw-primary-dark);
+  font-size: 28px;
+}
+
+.processing-status h1 {
+  margin: 28px 0 0;
+  font-size: 28px;
+}
+
+.processing-status p {
+  margin: 8px 0 0;
+  color: var(--cw-text-secondary);
+}
+
+.indeterminate {
+  width: min(100%, 300px);
+  height: 10px;
+  overflow: hidden;
+  margin-top: 24px;
+  border-radius: 999px;
+  background: #e7e3d8;
+}
+
+.indeterminate::after {
+  content: "";
+  display: block;
+  width: 42%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--cw-primary);
+  animation: scan-progress 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes scan-progress {
+  from { transform: translateX(-20%); }
+  to { transform: translateX(160%); }
+}
+
+.uncertain-region {
+  margin-top: 12px;
+  padding: 16px;
+  border: 3px dashed #d97706;
+  border-radius: 16px;
+  background: #fffbeb;
+}
+
+.uncertain-region strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #92400e;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.action-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.boss-screen .app-main {
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+.boss-screen .boss-banner,
+.boss-screen .math-problem {
+  padding: 15px 18px;
+}
+
+.boss-screen .math-problem {
+  margin-top: 12px;
+}
+
+.boss-screen .prism-guide {
+  grid-template-columns: 60px minmax(0, 1fr);
+  padding: 9px 12px;
+}
+
+.boss-screen .prism-guide__character {
+  width: 56px;
+  height: 56px;
+}
+
+.boss-screen .fraction-strips {
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.boss-screen .answer-entry {
+  margin-top: 10px;
+}
+
+.boss-screen .action-stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px !important;
+}
+
+.boss-screen .secondary-action {
+  margin-top: 0;
+  padding-inline: 10px;
+  text-align: center;
+}
+
+@media (min-width: 760px) {
+  .capture-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr);
+    gap: 18px;
+    align-items: start;
+  }
+}

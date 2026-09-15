@@ -1,0 +1,183 @@
+<!doctype html>
+<!--
+  THROWAWAY UI PROTOTYPE
+  Question: Which desktop-web Play Home shell should carry the existing mobile product into the web MVP?
+  Three structurally different variants are switchable with ?variant=A, ?variant=B, and ?variant=C.
+  This file intentionally does not modify or replace any mobile prototype.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Play Home Prototype — Curious Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="../canonical-state.js"></script>
+  <script defer src="../shared.js"></script>
+  <script defer src="prototype.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#prototype-content">Skip to content</a>
+
+  <section class="variant variant-a" data-variant="A" aria-label="Variant A, Tutor stage">
+    <div class="a-shell">
+      <aside class="side-rail" aria-label="Primary navigation">
+        <a class="brand brand--stacked" href="#" aria-label="Curious Workshop home">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>Curious<br>Workshop</span>
+        </a>
+        <nav class="rail-nav">
+          <a class="rail-link is-active" href="#" aria-current="page"><span class="nav-glyph nav-glyph--play" aria-hidden="true"></span>Play</a>
+          <a class="rail-link" href="#"><span class="nav-glyph nav-glyph--path" aria-hidden="true"></span>Path</a>
+          <a class="rail-link" href="#"><span class="nav-glyph nav-glyph--me" aria-hidden="true"></span>Me</a>
+        </nav>
+        <button class="profile-chip" type="button" aria-label="Open Maya's profile">
+          <span class="profile-avatar" aria-hidden="true">M</span>
+          <span><strong>Maya</strong><small>Class 6</small></span>
+        </button>
+      </aside>
+
+      <div class="a-workspace">
+        <header class="topbar">
+          <div><span class="eyebrow">Thursday, 5 September</span><h1>Hi, Maya</h1></div>
+          <div class="stat-pills" aria-label="Learning progress">
+            <span class="stat-pill stat-pill--streak"><svg aria-hidden="true"><use href="../icons.svg#flame"></use></svg><strong>7</strong><small>day streak</small></span>
+            <span class="stat-pill"><svg aria-hidden="true"><use href="../icons.svg#bolt"></use></svg><strong>340</strong><small>XP</small></span>
+          </div>
+        </header>
+
+        <main id="prototype-content" class="a-main">
+          <section class="quest-stage" aria-labelledby="a-quest-title">
+            <div class="stage-copy">
+              <span class="quest-label"><span aria-hidden="true"></span>Daily Quest</span>
+              <h2 id="a-quest-title">Ready to make fractions click?</h2>
+              <p>Prism made a short quest around <strong>Equivalent Fractions</strong> for you.</p>
+              <a class="primary-action" href="#">Start quest <span aria-hidden="true">→</span></a>
+              <div class="quest-meta"><span>About 10 minutes</span><span aria-hidden="true">•</span><span>6 Problems</span><span aria-hidden="true">•</span><span>Worth 120 XP</span></div>
+            </div>
+            <div class="stage-guide">
+              <div class="speech-card"><strong>We’ll start visually.</strong><span>If anything gets tricky, I’ll break it down with you.</span></div>
+              <div class="prism prism--hero" data-prism="ready" role="img" aria-label="Prism is ready to guide today's quest"></div>
+              <div class="orbit orbit--one" aria-hidden="true"></div>
+              <div class="orbit orbit--two" aria-hidden="true"></div>
+            </div>
+          </section>
+
+          <div class="a-lower-grid">
+            <section class="panel weekly-panel" aria-labelledby="a-weekly-title">
+              <div class="panel-heading"><div><span class="eyebrow">Weekly goal</span><h2 id="a-weekly-title">Two quests to your reward</h2></div><span class="count-chip">3 of 5</span></div>
+              <div class="week-track" aria-label="3 of 5 weekly quests complete"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span></span><span></span></div>
+              <p>Finish today’s quest to move one step closer.</p>
+            </section>
+
+            <section class="panel continue-panel" aria-labelledby="a-path-title">
+              <div class="landmark" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div><span class="eyebrow">Your Path</span><h2 id="a-path-title">Fractions</h2><p>4 of 7 Skills strengthened</p></div>
+              <a class="text-action" href="#" aria-label="Open Fractions Path">View Path <span aria-hidden="true">→</span></a>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <section class="variant variant-b" data-variant="B" aria-label="Variant B, Workshop journey">
+    <header class="b-header">
+      <a class="brand" href="#" aria-label="Curious Workshop home"><span class="brand-mark" aria-hidden="true">C</span><span>Curious Workshop</span></a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="is-active" href="#" aria-current="page">Play</a><a href="#">Path</a><a href="#">Me</a>
+      </nav>
+      <div class="stat-pills" aria-label="Learning progress">
+        <span class="stat-pill stat-pill--streak"><svg aria-hidden="true"><use href="../icons.svg#flame"></use></svg><strong>7</strong></span>
+        <span class="stat-pill"><svg aria-hidden="true"><use href="../icons.svg#bolt"></use></svg><strong>340 XP</strong></span>
+        <button class="profile-avatar" type="button" aria-label="Open Maya's profile">M</button>
+      </div>
+    </header>
+
+    <main class="b-main" id="b-prototype-content">
+      <section class="journey-board" aria-labelledby="b-title">
+        <div class="board-heading"><div><span class="eyebrow">Today’s workshop</span><h1 id="b-title">Follow Prism to today’s quest</h1><p>A short route through Equivalent Fractions, made for your current pace.</p></div><span class="time-chip">About 10 min</span></div>
+        <div class="mini-map" aria-label="Today's six-Problem quest path">
+          <svg class="map-line" viewBox="0 0 820 330" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M35 255 C140 330 190 120 310 182 S480 315 570 170 S708 63 790 112" fill="none" stroke="#c7d2fe" stroke-width="18" stroke-linecap="round" stroke-dasharray="2 28"/>
+          </svg>
+          <div class="map-node is-complete" style="--x:9%;--y:74%"><span>1</span><small>Warm-up</small></div>
+          <div class="map-node is-current" style="--x:36%;--y:48%"><div class="prism prism--traveler" data-prism="leading" aria-hidden="true"></div><span>2</span><small>Start here</small></div>
+          <div class="map-node" style="--x:57%;--y:70%"><span>3</span><small>Build</small></div>
+          <div class="map-node" style="--x:77%;--y:33%"><span>4</span><small>Power-up</small></div>
+          <div class="map-finish" style="--x:92%;--y:20%" aria-hidden="true"><span></span><strong>Finish</strong></div>
+          <div class="map-callout">
+            <span class="quest-label"><span aria-hidden="true"></span>Daily Quest</span>
+            <h2>Equivalent Fractions</h2>
+            <p>6 Problems · Worth 120 XP</p>
+            <a class="primary-action" href="#">Start quest <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="b-sidebar" aria-label="Prism and weekly progress">
+        <section class="guide-panel">
+          <div class="prism prism--large" data-prism="ready" role="img" aria-label="Prism welcomes Maya"></div>
+          <div><span class="eyebrow">Prism says</span><h2>Hi, Maya</h2><p>Today we’ll turn the same amount into different-looking fractions.</p></div>
+        </section>
+        <section class="panel weekly-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Weekly goal</span><h2>Three down, two to go</h2></div><span class="count-chip">3/5</span></div>
+          <div class="week-track" aria-label="3 of 5 weekly quests complete"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span></span><span></span></div>
+        </section>
+        <a class="chapter-link" href="#"><span><small>Your chapter</small><strong>Fractions · 60%</strong></span><span aria-hidden="true">→</span></a>
+      </aside>
+    </main>
+  </section>
+
+  <section class="variant variant-c" data-variant="C" aria-label="Variant C, Focus theater">
+    <div class="c-shell">
+      <header class="c-header">
+        <a class="brand" href="#" aria-label="Curious Workshop home"><span class="brand-mark" aria-hidden="true">C</span><span>Curious Workshop</span></a>
+        <div class="c-greeting"><strong>Hi, Maya</strong><span>Prism has your next challenge ready.</span></div>
+        <div class="stat-pills" aria-label="Learning progress">
+          <span class="stat-pill stat-pill--streak"><svg aria-hidden="true"><use href="../icons.svg#flame"></use></svg><strong>7 days</strong></span>
+          <span class="stat-pill"><svg aria-hidden="true"><use href="../icons.svg#bolt"></use></svg><strong>340 XP</strong></span>
+        </div>
+      </header>
+
+      <main class="focus-theater" id="c-prototype-content">
+        <div class="theater-rays" aria-hidden="true"></div>
+        <div class="theater-guide">
+          <div class="prism prism--theater" data-prism="ready" role="img" aria-label="Prism is presenting today's quest"></div>
+          <div class="speech-card"><strong>Your next move</strong><span>Let’s spot fractions that look different but cover the same amount.</span></div>
+        </div>
+        <section class="theater-card" aria-labelledby="c-title">
+          <span class="quest-label"><span aria-hidden="true"></span>Daily Quest</span>
+          <h1 id="c-title">Equivalent Fractions</h1>
+          <p>Six quick Problems tuned to how you’re learning today.</p>
+          <div class="preview-strip" aria-label="Quest structure">
+            <span class="preview-step is-next"><i aria-hidden="true"></i><strong>See it</strong><small>Visual warm-up</small></span>
+            <span class="preview-line" aria-hidden="true"></span>
+            <span class="preview-step"><i aria-hidden="true"></i><strong>Build it</strong><small>Short practice</small></span>
+            <span class="preview-line" aria-hidden="true"></span>
+            <span class="preview-step"><i aria-hidden="true"></i><strong>Power up</strong><small>Final challenge</small></span>
+          </div>
+          <a class="primary-action primary-action--large" href="#">Start quest <span aria-hidden="true">→</span></a>
+          <div class="quest-meta"><span>About 10 minutes</span><span aria-hidden="true">•</span><span>Worth 120 XP</span></div>
+        </section>
+      </main>
+
+      <nav class="c-dock" aria-label="Primary navigation">
+        <a class="is-active" href="#" aria-current="page"><span class="nav-glyph nav-glyph--play" aria-hidden="true"></span>Play</a>
+        <a href="#"><span class="nav-glyph nav-glyph--path" aria-hidden="true"></span>Path</a>
+        <a href="#"><span class="nav-glyph nav-glyph--me" aria-hidden="true"></span>Me</a>
+        <span class="dock-divider" aria-hidden="true"></span>
+        <div class="dock-goal"><span><strong>Weekly goal</strong><small>3 of 5 quests</small></span><div class="mini-progress" aria-hidden="true"><i style="width:60%"></i></div></div>
+      </nav>
+    </div>
+  </section>
+
+  <nav class="prototype-switcher" aria-label="Web prototype variants">
+    <button type="button" data-previous aria-label="Previous variant">←</button>
+    <span><small>Desktop prototype</small><strong data-variant-label>A · Tutor stage</strong></span>
+    <button type="button" data-next aria-label="Next variant">→</button>
+  </nav>
+</body>
+</html>

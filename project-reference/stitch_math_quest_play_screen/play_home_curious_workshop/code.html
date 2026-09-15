@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play — Curious Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="../shared.css" rel="stylesheet">
+<link href="../hub.css" rel="stylesheet">
+<style>
+.play-hero{display:grid;place-items:center;text-align:center;padding:26px 20px;border:2px solid #c7d2fe;border-radius:26px;background:linear-gradient(150deg,#fffdf8,#eef2ff);box-shadow:0 6px 0 #c7d2fe}
+.play-mascot{width:126px;height:108px;display:grid;place-items:center;margin-bottom:20px;border:9px solid #c7d2fe;border-radius:32px;background:#111827;color:#a5f3fc;box-shadow:0 8px 0 var(--cw-primary-dark);font-size:29px;letter-spacing:7px}
+.play-hero h1{margin:8px 0 0;font-size:clamp(28px,7vw,38px);line-height:1.16;letter-spacing:-.035em}
+.play-hero p{margin:8px 0 0;color:var(--cw-text-secondary);line-height:1.45}
+.play-hero .primary-link{width:min(100%,380px);margin-top:22px}
+.quest-meta{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:13px;color:var(--cw-text-secondary);font-size:13px}
+.week-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.week-days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}
+.week-days span{height:12px;border-radius:999px;background:#e7e3d8}
+.week-days span.done{background:var(--cw-primary);box-shadow:0 2px 0 var(--cw-primary-dark)}
+@media(min-width:760px){.play-hero{padding-block:38px}.play-mascot{width:144px;height:124px}}
+</style>
+<script defer src="../canonical-state.js"></script>
+<script defer src="../shared.js"></script>
+</head>
+<body class="app-screen play-screen one-screen">
+<header class="app-header app-shell">
+<div class="app-header__identity"><strong>Hi, Maya</strong><span>Class 6 • Level 4</span></div>
+<div class="header-actions"><span class="header-pill" aria-label="7 day streak"><svg class="ui-icon" aria-hidden="true"><use href="../icons.svg#flame"></use></svg>7</span><span class="header-pill"><svg class="ui-icon" aria-hidden="true"><use href="../icons.svg#bolt"></use></svg>340 XP</span></div>
+</header>
+<main class="app-main app-shell">
+<section class="play-hero">
+<div class="play-mascot" data-prism="ready" role="img" aria-label="Prism is ready for today's quest"></div>
+<span class="status-label">Daily Quest</span>
+<h1>Ready for today’s quest?</h1>
+<p><strong>I made this for you:</strong> Equivalent Fractions</p>
+<a class="primary-link" href="../daily_quest_problem_1/code.html">Start quest <span aria-hidden="true">→</span></a>
+<div class="quest-meta"><span>About 10 minutes</span><span aria-hidden="true">•</span><span>6 Problems</span></div>
+</section>
+<div class="section-heading"><h2>Weekly goal</h2><span class="header-pill">3 of 5</span></div>
+<section class="app-card">
+<div class="week-row"><div><h3>Two quests to your weekly reward</h3><p>Today’s quest counts when you finish it.</p></div><svg class="ui-icon ui-icon--lg" role="img" aria-label="Weekly reward"><use href="../icons.svg#gift"></use></svg></div>
+<div class="week-days" aria-label="3 of 5 weekly quests complete"><span class="done"></span><span class="done"></span><span class="done"></span><span></span><span></span></div>
+</section>
+</main>
+<nav class="bottom-nav" aria-label="Primary">
+<a aria-current="page" href="code.html">Play</a>
+<a href="../path_curious_workshop/code.html">Path</a>
+<a href="../me_curious_workshop/code.html">Me</a>
+</nav>
+</body></html>
